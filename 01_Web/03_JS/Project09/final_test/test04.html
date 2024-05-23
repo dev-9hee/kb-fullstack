@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04. callback2</title>
+  </head>
+  <body></body>
+  <script>
+    function turtle(callback) {
+      setTimeout(function () {
+        console.log('거북이가 결승선에 도착 했습니다!');
+        callback();
+      }, 1000);
+    }
+
+    function rabbit() {
+      console.log('토끼가 결승선에 도착 했습니다!');
+    }
+
+    turtle(rabbit);
+  </script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let output = '';
+
+    for (let i = 0; i < 256; i++) {
+      output += '<div></div>';
+    }
+
+    document.body.innerHTML = output;
+
+    let divs = document.querySelectorAll('div');
+
+    for (let i = 0; i < divs.length; i++) {
+      divs[i].style.height = '2px';
+      divs[i].style.background = 'rgb(' + i + ',' + i + ',' + i + ')';
+    }
+  </script>
+</html>

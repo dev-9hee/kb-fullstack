@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02. 함수 선언문, 표현식</title>
+  </head>
+  <body></body>
+  <script>
+    // 함수 선언문 방식
+    sayHello(); // 어디서든 호출 가능
+
+    function sayHello() {
+      console.log('함수 선언문 방식 사용 : 정지희');
+    }
+
+    // 함수 표현식 방식
+    const sayHello2 = function () {
+      console.log('함수 표현식 방식 사용 : 정지희');
+    };
+
+    sayHello2(); // 꼭 먼저 정의한 후 사용
+  </script>
+</html>

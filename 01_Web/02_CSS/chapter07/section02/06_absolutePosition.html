@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Absolute Position</title>
+    <style>
+      body {
+        width: 500px;
+        margin: 0 auto;
+      }
+      #container {
+        width: 500px;
+        height: 300px;
+        border: 3px solid black;
+        position: relative;
+      }
+      .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+      }
+      #red {
+        background-color: red;
+        top: 10px;
+        left: 10px;
+      }
+      #green {
+        background-color: green;
+        top: 10px;
+        right: 10px;
+      }
+      #blue {
+        background-color: blue;
+        right: 10px;
+        bottom: 10px;
+      }
+      #yellow {
+        background-color: yellow;
+        left: 10px;
+        bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dummy Text</h1>
+    <div id="container">
+      <div id="red" class="circle"></div>
+      <div id="green" class="circle"></div>
+      <div id="blue" class="circle"></div>
+      <div id="yellow" class="circle"></div>
+    </div>
+    <h1>Dummy Text</h1>
+  </body>
+</html>

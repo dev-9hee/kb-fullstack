@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06. 문서 객체 모델</title>
+  </head>
+  <body>
+    <ul>
+      <li class="click">1번</li>
+      <li>2번</li>
+      <li id="remove">3번</li>
+      <li>4번</li>
+      <li class="red">5번</li>
+      <li class="red">6번</li>
+      <input id="input" type="text" />
+    </ul>
+    <script>
+      // 1번 리스트 "클릭" 메시지 창 띄우기
+      const clickEl = document.querySelector('.click');
+
+      clickEl.addEventListener('click', function () {
+        alert('클릭!');
+      });
+
+      // 3번 리스트는 클릭하면 리스트에서 삭제
+      const removeEl = document.getElementById('remove');
+
+      removeEl.addEventListener('click', function () {
+        removeEl.remove();
+      });
+
+      // 5, 6번 리스트는 배경색이 red
+      const redEl = document.querySelectorAll('.red');
+
+      for (i = 0; i < redEl.length; i++) {
+        redEl[i].style.backgroundColor = 'red';
+      }
+
+      // input 태그에 메소드체이닝 기법을 활용하여 placeholder 속성을 "이름을 입력하세요"로 변경
+      // setAttribute() : HTML요소에 속성값 할당, setAttribute(<attributeName>, <attributeValue>)
+      // placeholder 속성 : 힌트 표시
+      document.getElementById('input').placeholder = '이름을 입력하세요';
+      // .setAttribute('placeholder', '이름을 입력하세요');
+    </script>
+  </body>
+</html>

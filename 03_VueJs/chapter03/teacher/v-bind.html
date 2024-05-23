@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <img :src="imgSrc" alt="고양이" />
+      <button v-on:click="changeImgSrc">이미지 변경</button>
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return {
+          imgSrc:
+            'https://flexible.img.hani.co.kr/flexible/normal/922/470/imgdb/original/2019/1205/20191205500909.jpg',
+        };
+      },
+      methods: {
+        changeImgSrc() {
+          // this는 뷰 전체를 가리킴
+          this.imgSrc =
+            'https://image.ytn.co.kr/general/jpg/2023/0328/202303280800016395_d.jpg';
+        },
+      },
+    }).mount('#app');
+  </script>
+</html>

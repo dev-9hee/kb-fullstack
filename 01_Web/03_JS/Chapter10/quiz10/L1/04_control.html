@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        let ctext = '';
+        for (let i = 0; i < 10; i++) {
+          // ctext += '<h1>Header - ${i} - </h1>';
+          ctext += '<h1>Header - ' + i + '</h1>';
+        }
+        // 단순 텍스트
+        document.body.textContent = ctext;
+        // // HTML 태그 적용
+        // document.body.innerHTML = ctext;
+      };
+    </script>
+  </head>
+  <body></body>
+</html>

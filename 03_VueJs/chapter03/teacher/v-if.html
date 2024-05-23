@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>오늘 행운의 정도는 {{ luck }}</h1>
+      <h1 v-if="luck > 8">오늘은 행운의 날!! 로또 사자!!</h1>
+      <h1 v-else-if="luck > 5">오늘은 운이 좋으시군요!</h1>
+      <h1 v-else-if="luck > 2">평균적인 날입니다!</h1>
+      <h1 v-else="luck">아...............</h1>
+    </div>
+  </body>
+  <script>
+    const app = Vue.createApp({
+      name: 'APP',
+      data() {
+        return {
+          luck: parseInt(Math.random() * 10),
+        };
+      },
+    }).mount('#app');
+  </script>
+</html>

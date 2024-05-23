@@ -1,0 +1,28 @@
+* {
+  /* 기본 속성 제거 */
+  margin: 0;
+  padding: 0;
+}
+
+.display {
+  display: flex;
+  /* 가운데 정렬 */
+  align-items: center;
+  /* 글 여러 줄이 쌓이는 방향대로, 세로로 */
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background-color: palevioletred;
+}
+
+.input {
+  margin: 50px auto;
+}
+
+ul {
+  list-style: none;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 01_output_alert.html
+      console.log('< 문제_01 >');
+      alert('Hello JavaScript .. !');
+      console.log('Hello World...!');
+      console.log('Hello World...!');
+
+      // 02_variable_use.html
+      console.log('< 문제_02 >');
+      let radius = 10;
+      const PI = 3.14; // 상수는 대문자로 하는게 좋음
+      let circleArea = radius ** 2 * PI;
+      console.log(circleArea);
+
+      // 03_condition_else.html
+      console.log('< 문제_03 >');
+      // 되도록이면 const로 선언하고 변경해야 될 때 let으로 선언
+      let date = new Date();
+      let hours = date.getHours();
+
+      if (hours < 12) {
+        console.log('오전입니다.');
+      } else {
+        console.log('오후입니다.');
+      }
+
+      // 04_note_logic.html
+      console.log('< 문제_04 >');
+      const month = date.getMonth() + 1;
+
+      if (month >= 3 && month <= 5) {
+        console.log('봄입니다.');
+      } else if (month >= 6 && month <= 8) {
+        console.log('여름입니다.');
+      } else if (month >= 9 && month <= 11) {
+        console.log('가을입니다.');
+      } else {
+        console.log('겨울입니다.');
+      }
+
+      // 05_array_index.html
+      console.log('< 문제_05 >');
+      let array = [10, 20, 30, 40, 50];
+      console.log('배열의 길이 : ' + array.length);
+      for (i = 0; i < 5; i++) {
+        console.log(array[i]);
+      }
+
+      // 06_loop_while.html
+      console.log('< 문제_06 >');
+      let array2 = [10, 20, 30, 40, 50];
+      let a = 0;
+      // const arrLen = arr.length; => 여러번 쓸때는 변수 선언해서 쓰면 좋음
+      console.log('배열의 길이 : ' + array.length);
+      while (a < array.length) {
+        console.log(array[a]);
+        a++;
+      }
+
+      // 07_loop_forSum.html
+      console.log('< 문제_07 >');
+      let sum = 0;
+      for (i = 0; i <= 100; i++) {
+        sum += i;
+      }
+      console.log(sum);
+
+      // 08_function_return.html
+      console.log('< 문제_08 >');
+      function sqaure(x) {
+        return x ** 2;
+      }
+      console.log(sqaure(6));
+
+      // 09_function_callback.html
+      console.log('< 문제_09 >');
+      function callbackNumTimes(callback, num) {
+        for (let i = 0; i < num; i++) {
+          callback();
+        }
+      }
+      let fun = function () {
+        console.log('함수 호출');
+      };
+
+      callbackNumTimes(fun, 3);
+
+      // 10_function_nonameCallback.html / 뭐가 들어와도 실행함
+      console.log('<문제_10>');
+      function count2(callback) {
+        for (let i = 0; i < 3; i++) {
+          callback();
+        }
+      }
+      count2(function () {
+        console.log('함수 호출');
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

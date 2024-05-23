@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traditional Event - Default Event</title>
+    <script>
+      window.onload = function () {
+        const btn = document.getElementById('button');
+
+        // // 모든 이벤트 전담
+        // btn.onclick = function (e) {
+        //   e.preventDefault(); // 태그가 가지고 있는 기본적인 속성을 없앤다.
+        // };
+
+        btn.onclick = function () {
+          return false;
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <a id="button" href="https://www.naver.com">버튼</a>
+  </body>
+</html>

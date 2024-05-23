@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        let backgra = '';
+        for (let i = 0; i < 256; i++) {
+          backgra += '<div></div>';
+        }
+        document.body.innerHTML = backgra;
+
+        let divs = document.querySelectorAll('div');
+        for (let i = 0; i < divs.length; i++) {
+          let div = divs[i];
+
+          div.style.height = '3px';
+          // rgb('${i}, ${i}, ${i}') => 이렇게 쓰는게 더 좋음
+          div.style.background = 'rgb(' + i + ',' + i + ',' + i + ')';
+          // rgb(' + i + ',' + i + ',' + i + ')
+        }
+      };
+    </script>
+  </head>
+  <body></body>
+</html>

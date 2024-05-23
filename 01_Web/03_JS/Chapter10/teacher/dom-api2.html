@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+      }
+
+      .skyblue {
+        background-color: skyblue;
+      }
+
+      .plum {
+        background-color: plum;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box plum">BOX!!</div>
+    <script>
+      const boxEl = document.querySelector('.box'); // CSS선택자와 동일한 문법 적용, .box로 사용
+
+      boxEl.addEventListener('click', function () {
+        // boxEl.style.backgroundColor = 'skyblue';
+        if (boxEl.classList.contains('plum')) {
+          // 있으면 true, 없으면 false 전달
+          boxEl.classList.remove('plum');
+          boxEl.classList.add('skyblue');
+        } else {
+          boxEl.classList.remove('skyblue');
+          boxEl.classList.add('plum');
+        }
+      });
+    </script>
+  </body>
+</html>

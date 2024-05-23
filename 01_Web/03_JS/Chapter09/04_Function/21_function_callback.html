@@ -1,0 +1,27 @@
+<!-- 콜백 함수 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 함수 선언
+      function callTenTimes(callback) {
+        // 10회 반복
+        for (let i = 0; i < 10; i++) {
+          callback();
+        }
+      }
+
+      // 변수 선언
+      let fun = function () {
+        alert('함수 호출');
+      };
+
+      // 함수 호출
+      callTenTimes(fun);
+    </script>
+  </head>
+  <body></body>
+</html>

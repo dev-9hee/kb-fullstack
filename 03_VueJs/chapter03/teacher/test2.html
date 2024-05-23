@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>랜덤으로 생성된 숫자를 맞춰 보세요! {{ randNum }}</h1>
+      <h1 v-if="inputNum == 0"></h1>
+      <h1 v-else-if="randNum > inputNum">Up</h1>
+      <h1 v-else-if="randNum < inputNum">Down</h1>
+      <h1 v-else="randNum">정답</h1>
+      <input type="text" v-model.number="inputNum" />
+    </div>
+  </body>
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          randNum: parseInt(Math.random() * 9 + 1),
+          inputNum: 0,
+        };
+      },
+    }).mount('#app');
+  </script>
+</html>

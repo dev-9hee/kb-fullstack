@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="list">
+      <li>1</li>
+      <li>2</li>
+    </ul>
+    <button id="btn">추가</button>
+    <script>
+      // ID 선택방법 아래 2가지
+      const listEl = document.getElementById('list');
+      const btnEl = document.querySelector('#btn');
+
+      btnEl.addEventListener('click', function () {
+        const li = document.createElement('li');
+        li.textContent = '추가된 리스트';
+        listEl.appendChild(li); // list에 자식요소로 추가
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="header">Header</h1>
+    <h1 id="header">Header</h1>
+    <h1 id="header">Header</h1>
+    <script>
+      const headerElArr = document.querySelectorAll('h1');
+      console.log('headerElArr', headerElArr);
+
+      for (let i = 0; i < headerElArr.length; i++) {
+        headerElArr[i].style.backgroundColor = 'red';
+        headerElArr[i].style.color = 'orange';
+        headerElArr[i].textContent = 'From JS';
+      }
+    </script>
+  </body>
+</html>

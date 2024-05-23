@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <!-- Default : Get 방식 -->
+      <!-- 사용자가 입력하는 입력 양식 -->
+      <input type="text" name="text" value="text" /><br />
+      <!-- text : 초기값 -->
+      <input
+        type="text"
+        name="userid"
+        value=""
+        placeholder="사용자 id를 입력하세요."
+      /><br />
+      <input
+        type="password"
+        name="password"
+        placeholder="비밀번호를 입력하세요."
+      /><br />
+      <input type="file" name="file" value="file" /><br />
+      <input
+        type="checkbox"
+        id="agreement"
+        name="agreement"
+        value="checkbox"
+      /><br />
+      <label for="agreement">동의여부</label>
+      <input type="radio" name="radio" value="radio" /><br />
+
+      <!-- 보이지 않는 입력 양식 -->
+      <input type="hidden" name="hidden" value="hidden" /><br />
+
+      <!-- 버튼 -->
+      <input type="button" value="button" /><br />
+      <input type="reset" value="reset" /><br />
+      <input type="submit" value="submit" /><br />
+      <input type="image" sec="http://via.placeholder.com/100x100" />
+    </form>
+  </body>
+</html>

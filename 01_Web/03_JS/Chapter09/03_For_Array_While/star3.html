@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let N = 7; //길이설정
+
+      //   줄바꿈을 하지 않기 위해 문자열에 더한후 출력
+      //   ex) 3층
+      //     &&*   2 1
+      //     &***  1 3
+      //     ***** 0 5
+      //   1. 별은 2개씩 증가한다. (i*2)
+      //   2. 앞의 공백은 한개씩 감소한다. -i
+      //   3. 초기값은 공백이 N-1개, 별이 1개
+      //   4. i=0 부터 시작하므로, 별은 1 + 2*i, 공백은 (N-1)-i
+      //   5. 다만 console.log는 줄바꿈이 있으므로,
+      //   문자열 덧셈을 통해서 줄바꿈이 일어나지 않도록 설정
+
+      //<풀이>
+      for (let i = 0; i < N; i++) {
+        //N번 반복
+        let result = '';
+        //N-1-i개 출력
+        for (let j = 0; j < N - 1 - i; j++) {
+          result += ' ';
+        }
+        //2*i+1개 출력
+        for (let a = 0; a < 1 + 2 * i; a++) {
+          result += '*';
+        }
+        console.log(result);
+      }
+      for (let i = 0; i < N; i++) {
+        console.log(' '.repeat(N - i - 1), '*'.repeat(2 * i + 1));
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

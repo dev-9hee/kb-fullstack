@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>선재 업고 튀어 등장인물</h1>
+      <ul>
+        <li v-for="(character, index) in sunjaeArr" v-bind:key="index">
+          배역 : {{ character.casting }} / 배우 : {{ character.actor }}
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          sunjaeArr: [
+            { casting: '류선재', actor: '변우석' },
+            { casting: '임솔', actor: '김혜윤' },
+            { casting: '김태성', actor: '송건희' },
+            { casting: '백인혁', actor: '이승협' },
+          ],
+        };
+      },
+    }).mount('#app');
+  </script>
+</html>
