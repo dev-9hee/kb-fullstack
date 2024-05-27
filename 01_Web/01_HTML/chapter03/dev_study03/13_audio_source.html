@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- controls 속성 : 재생 도구 출력 여부 지정 -->
+    <audio controls="controls">
+      <!-- 웹 브라우저 마다 지원하는 미디어 포맷이 다름 -->
+      <!-- audio 태그 내부에 포맷별 source 태그를 입력해 해결 -->
+      <source src="audios/Kalimba.mp3" type="audio/mp3" />
+      <source src="audios/Kalimba.ogg" type="audio/ogg" />
+    </audio>
+  </body>
+</html>
