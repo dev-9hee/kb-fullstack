@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- vue 불러오기 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>count : {{ count }}</h1>
+      <!-- 인라인 이벤트, count++ => count = count + 1 /  v-on:click = @click -->
+      <button v-on:click="randRemain">
+        count 를 랜덤한 숫자로 만든 다음 랜덤한 숫자로 나눈 나머지
+      </button>
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: '오후 수업', // 앱 이름
+      data() {
+        return {
+          count: 0,
+        };
+      },
+      methods: {
+        randRemain() {
+          this.count = // 0에서 나누면 오류나니까 +1
+            parseInt(Math.random() * 10 + 1) % parseInt(Math.random() * 10 + 1);
+        },
+      },
+    }).mount('#app');
+  </script>
+</html>

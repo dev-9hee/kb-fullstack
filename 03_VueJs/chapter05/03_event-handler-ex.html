@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- vue 불러오기 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ msg }}</h1>
+      <!-- .number : 숫자로 받도록 설정 -->
+      <input type="text" v-model.number="inputNum" />
+      <button v-on:click="checkAnswer">확인</button>
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return {
+          random: parseInt(Math.random() * 20),
+          inputNum: 0,
+          msg: '랜덤으로 생성 된 숫자를 맞춰보세요',
+        };
+      },
+      methods: {
+        checkAnswer() {
+          // if (this.random > this.inputNum) return (this.msg = 'UP');
+          // if (this.random < this.inputNum) return (this.msg = 'DOWN');
+          // return (this.msg = '정답!');
+          if (this.inputNum < this.random) {
+            this.msg = 'Up';
+            console.log(`${this.random}>${this.inputNum} Up!!!`);
+          } else if (this.inputNum > this.random) {
+            this.msg = 'Down';
+            console.log(`${this.random}<${this.inputNum} Down!!!`);
+          } else {
+            this.msg = '정답';
+            console.log(`${this.random}=${this.inputNum} 정답입니다!!!`);
+          }
+        },
+      },
+    }).mount('#app');
+  </script>
+</html>

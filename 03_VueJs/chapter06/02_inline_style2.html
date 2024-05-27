@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- vue 불러오기 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 스타일 적용 안 됨 -->
+      <h1 :style="{ backgroundStyle, fontStyle }">
+        여러 스타일 적용하기 by 객체
+      </h1>
+      <!-- 스타일 적용됨 -->
+      <h1 :style="[backgroundStyle, fontStyle]">
+        여러 스타일 적용하기 by 배열
+      </h1>
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return {
+          backgroundStyle: { backgroundColor: 'plum' },
+          fontStyle: { color: 'white' }, // fontStyle은 color가 white인 객체
+        };
+      },
+    }).mount('#app');
+  </script>
+</html>

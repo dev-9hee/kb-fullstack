@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- vue 불러오기 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+      .bgOrange {
+        background-color: orange;
+      }
+      .bgSkyblue {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1 :class="styleObj">배경은??</h1>
+      <button @click="toggleStyle">배경 토글</button>
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return {
+          isOrange: false,
+        };
+      },
+      methods: {
+        toggleStyle() {
+          this.isOrange = !this.isOrange; // false면 true로 true면 false로
+        },
+      },
+      computed: {
+        styleObj() {
+          return this.isOrange ? 'bgOrange' : 'bgSkyblue';
+        },
+      },
+    }).mount('#app');
+  </script>
+</html>

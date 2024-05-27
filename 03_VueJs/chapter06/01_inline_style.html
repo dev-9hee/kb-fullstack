@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- vue 불러오기 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1 style="background-color: plum">일반 스타일</h1>
+      <!-- 직접 객체를 넣어줌, 객체에 대해서 여러값을 줄 때는 ,로 구분 -->
+      <h1 v-bind:style="{ backgroundColor: 'pink', color: 'white'}">
+        Vue 서타일
+      </h1>
+      <!-- 객체를 변수에 넣어서 스타일 적용 -->
+      <h1 :style="variableStyle">Vue 변수 스타일</h1>
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return {
+          variableStyle: { backgroundColor: 'dodgerblue' },
+        };
+      },
+    }).mount('#app');
+  </script>
+</html>
