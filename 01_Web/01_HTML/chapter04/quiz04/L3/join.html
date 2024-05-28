@@ -9,31 +9,24 @@
     <form>
       <fieldset>
         <legend>회원가입</legend>
+        <!-- <th> 태그는 가운데 정렬이 디폴트, <td>로 하면 왼쪽에 붙어서 나옴 -->
         <table>
           <tr>
-            <th>
-              <label for="userid">사용자 ID</label>
-            </th>
+            <th><label for="userid">사용자 ID</label></th>
             <td><input id="userid" type="text" name="userid" /></td>
           </tr>
           <tr>
-            <th>
-              <label for="password">비밀번호</label>
-            </th>
+            <th><label for="password">비밀번호</label></th>
             <td><input id="password" type="password" name="password" /></td>
           </tr>
           <tr>
-            <th>
-              <label for="password">비밀번호 확인</label>
-            </th>
+            <th><label for="password">비밀번호 확인</label></th>
             <td>
               <input id="password" type="password" name="passwordCheck" />
             </td>
           </tr>
           <tr>
-            <th>
-              <label for="username">이름</label>
-            </th>
+            <th><label for="username">이름</label></th>
             <td><input id="username" type="text" name="username" /></td>
           </tr>
           <tr>
@@ -48,39 +41,33 @@
           <tr>
             <th>취미</th>
             <td>
-              <input id="football" type="checkbox" name="favorite" />
-              <label for="football">축구</label>
-              <input id="baseball" type="checkbox" name="favorite" />
-              <label for="baseball">야구</label>
-              <input id="volleyball" type="checkbox" name="favorite" />
-              <label for="volleyball">배구</label>
-              <input id="basketball" type="checkbox" name="favorite" />
-              <label for="basketball">농구</label>
+              <input id="soc" type="checkbox" name="favorite" />
+              <label for="soc">축구</label>
+              <input id="base" type="checkbox" name="favorite" />
+              <label for="base">야구</label>
+              <input id="hand" type="checkbox" name="favorite" />
+              <label for="hand">배구</label>
+              <input id="bask" type="checkbox" name="favorite" />
+              <label for="bask">농구</label>
             </td>
           </tr>
           <tr>
-            <th>
-              <label for="email">email</label>
-            </th>
-            <td><input id="email" type="email" name="usermail" /></td>
+            <th><label for="email">email</label></th>
+            <td><input id="email" type="email" name="email" /></td>
           </tr>
           <tr>
             <th>역할</th>
             <td>
               <select name="role">
-                <option value="admin">ADMIN</option>
-                <option value="manager">관리자</option>
-                <option value="member">일반회원</option>
+                <option>ADMIN</option>
+                <option>관리자</option>
+                <option>일반회원</option>
               </select>
             </td>
           </tr>
-          <tr>
-            <td colspan="2">
-              <input type="submit" value="확인" />
-              <input type="reset" value="다시쓰기" />
-            </td>
-          </tr>
         </table>
+        <input type="submit" value="확인" />
+        <input type="reset" value="다시쓰기" />
       </fieldset>
     </form>
   </body>

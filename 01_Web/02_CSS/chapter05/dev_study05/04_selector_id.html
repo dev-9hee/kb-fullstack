@@ -7,16 +7,20 @@
     <style>
       #header {
         width: 800px;
+        /* 0 : 위아래, auto : 오른쪽왼쪽 */
+        /*  margin: 0 auto; -> 중앙정렬, 블럭태그에만 해당 */
         margin: 0 auto;
         background: red;
       }
       #wrap {
         width: 800px;
         margin: 0 auto;
+        /* 초과된 부분을 숨기도록 설정 */
         overflow: hidden;
       }
       #aside {
         width: 200px;
+        /* div태그는 블록형식으로 원래 줄바꿈이루어짐 / float: left;는 줄 바꾸는 걸 제거 */
         float: left;
         background: blue;
       }
