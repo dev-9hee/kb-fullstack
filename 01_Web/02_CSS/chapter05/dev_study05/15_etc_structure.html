@@ -6,11 +6,15 @@
     <title>CSSS Selector Basic</title>
     <style>
       ul {
+        /* 초과된 부분을 보이지 않도록 숨김 */
         overflow: hidden;
       }
       li {
+        /* list-style: none; // boolean 없어짐 */
         list-style: none;
+        /* list 수직정렬 => 수평정렬로 바꾸는 방법 */
         float: left;
+        /* padding 영역까지 배경색 들어감, margin 영역은 안 들어감 */
         padding: 15px;
       }
       li:first-child {
