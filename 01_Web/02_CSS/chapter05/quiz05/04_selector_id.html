@@ -6,37 +6,45 @@
     <title>CSS3 Selector Basic</title>
     <style>
       #header {
+        background-color: pink;
         width: 800px;
         margin: 0 auto;
-        background: red;
       }
-      #wrap {
+      /* second에 overflow: hidden; 적용 */
+      /* 클리어링 : second 내부의 부유 요소들의 높이 계산하여 부모 요소의 높이를 자동으로 조정 */
+      /* 부유 요소들 : #aside, #content */
+      /* overflow되는 현상을 방지하려면 부모요소에서 overflow: hidden 추가 */
+      #second {
         width: 800px;
         margin: 0 auto;
         overflow: hidden;
       }
+      /* aside와 content에 각각 overflow: hidden; 적용*/
+      /* 개별 요소들에 적용, 해당 요소의 내용이 넘칠 경우 숨겨짐 */
+      /* 하지만, 부모 요소인 #second에 클리어링 효과를 주지 않음 */
+      /* 결국, #second의 높이가 0이 돼서 상위 요소의 배경색이나 경계선이 제대로 표시 x */
       #aside {
-        width: 200px;
+        background-color: aquamarine;
+        width: 300px;
         float: left;
-        background: blue;
       }
       #content {
-        width: 600px;
+        background-color: palegreen;
+        width: 500px;
         float: left;
-        background: green;
       }
     </style>
   </head>
   <body>
     <div id="header">
       <h1>#header 태그</h1>
-    </div>
-    <div id="wrap">
-      <div id="aside">
-        <h1>#aside 태그</h1>
-      </div>
-      <div id="content">
-        <h1>#content 태그</h1>
+      <div id="second">
+        <div id="aside">
+          <h1>#aside 태그</h1>
+        </div>
+        <div id="content">
+          <h1>#content 태그</h1>
+        </div>
       </div>
     </div>
   </body>
