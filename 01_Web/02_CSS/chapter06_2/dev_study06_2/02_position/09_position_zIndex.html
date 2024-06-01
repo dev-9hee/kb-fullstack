@@ -1,4 +1,4 @@
-<!-- left,top 속성 적용 -->
+<!-- zIndex속성 적용 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,20 +11,28 @@
         height: 100px;
         position: absolute;
       }
+      /* position 속성 값이 있는 경우 */
+      /* 위에 조건이 같으면, z-index 속성의 숫자 값이 높을 수록 위에 쌓임 */
+      /* 젤 위에 옴 */
       .box:nth-child(1) {
         background-color: red;
         left: 10px;
         top: 10px;
+        z-index: 100;
       }
+      /* 두 번째 위에 옴 */
       .box:nth-child(2) {
         background-color: green;
         left: 50px;
         top: 50px;
+        z-index: 10;
       }
+      /* 세 번째 위에 옴 */
       .box:nth-child(3) {
         background-color: blue;
         left: 90px;
         top: 90px;
+        z-index: 1;
       }
     </style>
   </head>

@@ -1,3 +1,4 @@
+<!-- left,top 속성 적용 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,38 +11,29 @@
         height: 100px;
         position: absolute;
       }
+      /* absolute : 위치상 부모 요소를 기준으로 배치 */
+      /* 지금은 부모 요소가 뷰포트이므로 뷰포트를 기준으로! */
+      /* 순서대로 쌓임 */
       .box:nth-child(1) {
         background-color: red;
         left: 10px;
         top: 10px;
-        z-index: 100;
       }
       .box:nth-child(2) {
         background-color: green;
         left: 50px;
         top: 50px;
-        z-index: 10;
       }
       .box:nth-child(3) {
         background-color: blue;
         left: 90px;
         top: 90px;
-        z-index: 1;
-      }
-      body > div {
-        width: 400px;
-        height: 100px;
-        border: 3px solid black;
       }
     </style>
   </head>
   <body>
-    <h1>Lorem ipsum dolor sit amet.</h1>
-    <div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-    </div>
-    <h1>Lorem ipsum dolor sit amet.</h1>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
   </body>
 </html>

@@ -28,11 +28,25 @@
         top: 90px;
         z-index: 1;
       }
+      /* overflow에 hidden 적용 : 영역을 벗어나는 부분 감춤 */
+      /* overflow에 scroll 적용 : 영역을 벗어나는 부분을 스크롤로 만듦 */
       body > div {
         width: 400px;
         height: 100px;
         border: 3px solid black;
         position: relative;
+        /* overflow: hidden; */
+        /* overflow: scroll; */
+
+        /* 이것만 설정했을 때 y축도 스크롤 생김 */
+        /* 이유1 : 수평 스크롤이 생기면서 높이 증가 */
+        /* 이유2 : 기본적인 브라우저 스크롤바 스타일링 */
+        /* 이유3 : 내부 요소의 크기 : 내부 요소가 부모 요소의 높이를 추가하는 경우*/
+        overflow-x: scroll;
+        /* 해결방법 : 부모 요소에 overflow-y: hidden을 추가하여 수직 스크롤 숨김 */
+        overflow-y: hidden;
+        /* 이 경우 y축만 스크롤 생김 */
+        overflow-y: scroll;
       }
     </style>
   </head>

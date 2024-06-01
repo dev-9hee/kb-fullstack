@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS3 Position Property</title>
     <style>
+      /* 따로 지정된 부모 요소가 없으므로 */
+      /* 부모요소인 뷰포트를 기준으로 */
       .box {
         width: 100px;
         height: 100px;
@@ -27,14 +29,6 @@
         left: 90px;
         top: 90px;
         z-index: 1;
-      }
-      body > div {
-        width: 400px;
-        height: 100px;
-        border: 3px solid black;
-        position: relative;
-        overflow: hidden;
-        /* overflow: scroll; */
       }
     </style>
   </head>

@@ -6,17 +6,26 @@
     <title>CSS3 Font Property</title>
     <style>
       .font_big {
+        /* 글자의 크기, em : 배수 */
         font-size: 2em;
       }
       .font_italic {
         font-style: italic;
       }
       .font_bold {
+        /* 글자의 두께 */
         font-weight: bold;
+      }
+      .font_line {
+        /* 한 줄의 높이, 행간과 유사 */
+        line-height: 100px;
       }
     </style>
   </head>
   <body>
-    <p class="font_big font_italic font_bold">Lorem ipsum dolor sit amet.</p>
+    <div class="font_line">
+      <p class="font_big font_italic font_bold">Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
   </body>
 </html>
