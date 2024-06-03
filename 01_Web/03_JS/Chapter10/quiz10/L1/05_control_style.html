@@ -17,8 +17,8 @@
           let div = divs[i];
 
           div.style.height = '3px';
-          // rgb('${i}, ${i}, ${i}') => 이렇게 쓰는게 더 좋음
-          div.style.background = 'rgb(' + i + ',' + i + ',' + i + ')';
+          // div.style.background = 'rgb(' + i + ',' + i + ',' + i + ')';
+          div.style.background = `rgb(${i}, ${i}, ${i})`; // 이렇게 쓰는게 더 편리
           // rgb(' + i + ',' + i + ',' + i + ')
         }
       };

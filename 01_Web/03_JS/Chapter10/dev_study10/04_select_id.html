@@ -1,0 +1,19 @@
+<!-- getElementById() 메서드를 사용해 문서 객체 1개 선택 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="header">Header</h1>
+    <script>
+      const headerEl = document.getElementById('header');
+      headerEl.style.backgroundColor = 'red';
+      headerEl.style.color = 'orange';
+      // 문서 객체 내부 글자의 HTML 태그를 반영해 가져오도록 변경
+      headerEl.innerHTML = 'From JS';
+    </script>
+  </body>
+</html>
