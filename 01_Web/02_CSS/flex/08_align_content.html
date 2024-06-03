@@ -7,23 +7,23 @@
     <style>
       .flex-container {
         display: flex;
-        flex-wrap: nowrap;
+        height: 600px;
+        flex-wrap: wrap;
+        align-content: center;
+        /* space-between, space-around, stretch(기본), flex-start, flex-end, center*/
         background-color: dodgerblue;
       }
       .flex-container > div {
-        background-color: pink;
+        background-color: #f1f1f1;
         width: 100px;
         margin: 10px;
         text-align: center;
-        /* height: 70px; 로 하면 숫가가 가운데 안 옴 */
         line-height: 75px;
         font-size: 30px;
       }
     </style>
   </head>
   <body>
-    <h1>Flexible Boxes</h1>
-
     <div class="flex-container">
       <div>1</div>
       <div>2</div>
@@ -33,6 +33,10 @@
       <div>6</div>
       <div>7</div>
       <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
     </div>
   </body>
 </html>

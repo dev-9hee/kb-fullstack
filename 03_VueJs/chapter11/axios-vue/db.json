@@ -1,0 +1,32 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "todo": "운동",
+      "desc": "열심히 해야지!",
+      "done": false
+    },
+    {
+      "id": "2",
+      "todo": "공부",
+      "desc": "꾸준히 해야지!",
+      "done": false
+    },
+    {
+      "id": "8196",
+      "todo": "들어가니!?",
+      "desc": "들어갔니!?",
+      "done": false
+    }
+  ],
+  "users": [
+    {
+      "id": "jihee",
+      "password": "3333"
+    },
+    {
+      "id": "minsoo",
+      "password": "5555"
+    }
+  ]
+}

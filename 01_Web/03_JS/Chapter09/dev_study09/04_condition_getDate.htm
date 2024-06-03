@@ -1,0 +1,29 @@
+<!-- 현재 시간 구하기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // Date 객체를 선언
+      let date = new Date();
+
+      // 요소 추출
+      let year = date.getFullYear();
+      let month = date.getMonth() + 1;
+      let day = date.getDay();
+      let hours = date.getHours();
+      let minutes = date.getMinutes();
+      let seconds = date.getSeconds();
+
+      alert(year);
+      alert(month);
+      alert(day);
+      alert(hours);
+      alert(minutes);
+      alert(seconds);
+    </script>
+  </head>
+  <body></body>
+</html>

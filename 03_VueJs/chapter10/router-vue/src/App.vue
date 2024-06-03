@@ -9,6 +9,10 @@
       &nbsp;
       <RouterLink to="/about">라우터란!?</RouterLink>
       &nbsp;
+      <RouterLink to="/dynamic/happy">행복하다!!</RouterLink>
+      &nbsp;
+      <RouterLink to="/dynamic/exciting">신난다!!</RouterLink>
+      &nbsp;
       <RouterLink to="/jihee">이름 : 정지희</RouterLink>
     </nav>
     <!-- 라우팅에 대응하는 컴포넌트를 어디에 배치할건지를 설정 -->

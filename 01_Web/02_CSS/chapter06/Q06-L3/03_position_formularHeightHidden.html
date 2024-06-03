@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+      .box:nth-child(1) {
+        background-color: red;
+        left: 10px;
+        top: 10px;
+        z-index: 100;
+      }
+      .box:nth-child(2) {
+        background-color: green;
+        left: 50px;
+        top: 50px;
+        z-index: 10;
+      }
+      .box:nth-child(3) {
+        background-color: blue;
+        left: 90px;
+        top: 90px;
+        z-index: 1;
+      }
+
+      /* class box 를 가지는 div 요소의 부모 요소인 div 를 선택하기 위한 자식 선택자인 > 를 사용 */
+      body > div {
+        /* 박스 크기 및 테두리 설정 */
+        width: 400px;
+        height: 100px;
+        border: 3px solid black;
+
+        /* absolute 포지션 값을 가진 box 들의 기준점이 되어야 하므로, position 을 relative 로 변경 */
+        position: relative;
+
+        /* 자신의 밖으로 넘치는 자식 요소들을 안보이게 처리하므로 overflow: hidden 처리 */
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor amet</h1>
+    <div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <h1>Lorem ipsum dolor amet</h1>
+  </body>
+</html>

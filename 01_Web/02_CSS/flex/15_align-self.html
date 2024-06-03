@@ -7,32 +7,27 @@
     <style>
       .flex-container {
         display: flex;
-        flex-wrap: nowrap;
-        background-color: dodgerblue;
+        height: 200px;
+        background-color: antiquewhite;
       }
       .flex-container > div {
-        background-color: pink;
+        background-color: dodgerblue;
+        color: white;
         width: 100px;
         margin: 10px;
         text-align: center;
-        /* height: 70px; 로 하면 숫가가 가운데 안 옴 */
         line-height: 75px;
         font-size: 30px;
       }
     </style>
   </head>
   <body>
-    <h1>Flexible Boxes</h1>
-
     <div class="flex-container">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
+      <!-- 교차축으로 여백을 어떻게 대처할 지 지정 -->
+      <div style="align-self: flex-start">1</div>
+      <div style="align-self: flex-end">2</div>
+      <div style="align-self: center">3</div>
       <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
-      <div>8</div>
     </div>
   </body>
 </html>

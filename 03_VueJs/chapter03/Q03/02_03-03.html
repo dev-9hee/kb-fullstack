@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-bind:value="message" />
+      <br />
+      <img v-bind:src="imagePath" />
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return {
+          message: 'v-bind 디렉티브',
+          imagePath: 'https://contactsvc.bmaster.kro.kr/photos/18.jpg',
+        };
+      },
+    }).mount('#app');
+  </script>
+</html>

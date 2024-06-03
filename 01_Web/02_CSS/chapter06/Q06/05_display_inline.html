@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      div {
-        border: 5px dashed black;
-        border-radius: 50px 40px 20px 10px;
+      #box {
+        /* display: inline-block 도 동일한 효과를 냅니다! :) */
+        display: inline;
       }
     </style>
   </head>
   <body>
-    <div>
-      <h1>Lorem ipsum dolor sit amet.</h1>
-    </div>
+    <span>더미 객체</span>
+    <div id="box">대상 객체</div>
+    <span>더미 객체</span>
   </body>
 </html>
