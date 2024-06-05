@@ -1,0 +1,21 @@
+<!-- 기본 이벤트 제거 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trnnditional Event - Default Event</title>
+  </head>
+  <body>
+    <a id="button" href="http://hanbit.co.kr">버튼</a>
+    <script>
+      const button = document.getElementById('button');
+      button.onclick = function (e) {
+        // e.preventDefault();
+        return false;
+      };
+      // // 화살표 함수 사용
+      // button.onclick = (e) => false;
+    </script>
+  </body>
+</html>

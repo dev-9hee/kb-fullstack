@@ -1,0 +1,18 @@
+<!-- script 태그에 인라인 이벤트 모델 사용 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline Event</title>
+    <script>
+      function buttonClick() {
+        alert('click');
+      }
+    </script>
+  </head>
+  <body>
+    <!-- 클릭하면 위에 선언된 함수를 불러와서 alert 출력 -->
+    <button onclick="buttonClick()">버튼</button>
+  </body>
+</html>
