@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 수식어 : v-model 디렉티브에 특별한 기능 추가
+         number : 문자열을 숫자로 자동 형변환시켜 속성에 반영
+         trim, lazy.... -->
+      <!-- 입력에 제한을 두는 것이 아닌 바인딩 값을 숫자로 형변환 시키는 것 -->
+      <input type="text" v-model.number="num" /><br />
+      입력된 수 : <span>{{ num }}</span>
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'APP',
+      data() {
+        return {
+          num: 0,
+        };
+      },
+    }).mount('#app');
+  </script>
+</html>

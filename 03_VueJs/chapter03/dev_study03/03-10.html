@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      예금액 : <input type="text" v-model="amount" />
+      <!-- v-if : 조건에 부합되지 않을 경우 요소를 생성하지 않음(화면출력 x) -->
+      <!-- 조건이 맞으면 요소 생성 -->
+      <img
+        v-if="amount<0"
+        src="https://contactsvc.bmaster.kro.kr/img/error.png"
+        title="마이너스는 허용하지 않습니다."
+        style="width: 15px; height: 15px; vertical-align: middle"
+      />
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return {
+          amount: '',
+        };
+      },
+    }).mount('#app');
+  </script>
+</html>

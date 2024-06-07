@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <!-- v-model="속성" / 양방향 데이터 바인딩
+        속성값 변경시 UI 변경, UI 입력값 변경시 속성값 변경
+        주로 form 요소에 바인딩 / input, select, textarea 등 -->
+    <div id="app">
+      <input type="text" v-model="name" />
+      <br />
+      입력한 값 : <span>{{ name }}</span>
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return {
+          name: '',
+        };
+      },
+    }).mount('#app');
+  </script>
+</html>

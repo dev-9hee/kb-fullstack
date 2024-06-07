@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      위의 내용에 동의하십니까?
+      <!-- checkbox의 v-model 바인딩
+        다중선택시 => 배열 속성에 바인딩 / 단일 선택시 => 단일 속성에 바인딩
+        디폴트 값 : true/false / true-value, false-value로 값 지정 가능 -->
+      <input
+        type="checkbox"
+        v-model="agree"
+        true-value="yes"
+        false-value="no"
+      />
+      <hr />
+      <span>선택된 값 : {{agree}}</span>
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return {
+          agree: 'no', // 단일 선택, 초기값(체크를 안 한 상태)
+        };
+      },
+    }).mount('#app');
+  </script>
+</html>

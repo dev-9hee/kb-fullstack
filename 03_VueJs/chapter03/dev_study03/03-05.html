@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <h2>취미생활</h2>
+        <!-- value : 체크했을 대 가지는 값 -->
+        <!-- 다중선택이 가능하므로 hobby는 배열이어야 함 -->
+        <!-- hobby=['A', 'B', ...] // 선택된 value 값이 들어감 -->
+        <label><input type="checkbox" value="A" v-model="hobby" />운동</label>
+        <label><input type="checkbox" value="B" v-model="hobby" />독서</label>
+        <label><input type="checkbox" value="C" v-model="hobby" />음악</label>
+        <label><input type="checkbox" value="D" v-model="hobby" />댄스</label>
+        <label><input type="checkbox" value="E" v-model="hobby" />역사</label>
+      </div>
+      <div>
+        <h2>상품 분류 선택</h2>
+        <!-- select는 default가 단일 선택 -->
+        <!-- multiple 속성 추가시 배열로 선언! -->
+        <select v-model="category">
+          <option value="">-- 상품 분류를 선택하세요.</option>
+          <option value="C01">레저</option>
+          <option value="C02">가전</option>
+          <option value="C03">음식</option>
+          <option value="C04">도서</option>
+          <option value="C05">주방</option>
+        </select>
+      </div>
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'APP',
+      data() {
+        return {
+          hobby: [], // 만약 hobby:['C','D'] // 초기값, 체크되어 있음
+          category: '',
+        };
+      },
+    }).mount('#app');
+  </script>
+</html>
