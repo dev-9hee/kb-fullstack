@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!--한글이 바로바로 출력 -->
+      <!-- v-bind(:) => 단방향 / @ : 이벤트 처리 / 이벤트 처리를 통해 양방향 효과를 냄 -->
+      <input type="text" :value="name" @input="changeName" />
+      <br />
+      이름 : <span>{{ name }}</span>
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return {
+          name: '', // this.name
+        };
+      },
+      methods: {
+        changeName(e) {
+          // 이벤트 객체를 매개변수로 받음
+          this.name = e.target.value; // target : 이벤틀를 발생시킨 객체
+        },
+      },
+    }).mount('#app');
+  </script>
+</html>

@@ -1,0 +1,37 @@
+<!-- 수식어를 통한 기본 이벤트 차단 : @이벤트.prevent-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div
+        @contextmenu.prevent
+        style="position: absolute; left: 5px; top: 5px; right: 5px; bottom: 5px"
+      >
+        <a href="https://facebook.com" @click="confirmFB">페이스북</a>
+      </div>
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return {};
+      },
+      methods: {
+        confirmFB(e) {
+          // confirm() 함수 : JavaScript에서 사용자에게 확인(OK) 또는 취소(Cancel) 선택지를 제공하는 팝업 대화 상자를 표시하는 함수
+          // 사용자가 취소 버튼을 클릭하면 preventDefault 메서드가 호출되어 url로 이동하는 실행을 중지시킴
+          if (!confirm('페이스북으로 이동할까요?')) {
+            e.preventDefault();
+          }
+        },
+      },
+    }).mount('#app');
+  </script>
+</html>

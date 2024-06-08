@@ -1,0 +1,43 @@
+<!-- watch 옵션 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      x : <input type="text" v-model.number="x" /><br />
+      y : <input type="text" v-model.number="y" /><br />
+      덧셈 결과 : {{sum}}
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return { x: 0, y: 0, sum: 0 };
+      },
+      // 관찰 속성 => watch 옵션
+      watch: {
+        // data 또는 속성명 (변경후 x값, 변경전 x값)
+        x(current, old) {
+          console.log(`## x : ${old} --> ${current}`); // x가 변경될 때마다 old 값에서 current 값으로 변한 것을 보여줌
+          const result = Number(current) + Number(this.y); // current 값을 숫자로 변환하고, this.y 값도 숫자로 변환하여 둘을 더한 결과를 result에 저장
+          // result가 NaN인지 확인, result가 NaN이면 this.sum을 0으로 설정
+          if (isNaN(result)) this.sum = 0;
+          else this.sum = result;
+        },
+        // data 또는 속성명 (변경후 y값, 변경전 y값)
+        y(current, old) {
+          console.log(`## y : ${old} --> ${current}`);
+          const result = Number(this.x) + Number(current);
+          if (isNaN(result)) this.sum = 0;
+          else this.sum = result;
+        },
+      },
+    }).mount('#app');
+  </script>
+</html>

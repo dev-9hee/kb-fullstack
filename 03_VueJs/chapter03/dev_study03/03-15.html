@@ -21,6 +21,10 @@
         color: yellow;
         background-color: purple;
       }
+      .divider {
+        height: 2px;
+        background-color: gray;
+      }
     </style>
   </head>
   <body>
@@ -33,15 +37,19 @@
             <th>전화번호</th>
           </tr>
         </thead>
+        <!-- contact로 해도 상관없음, id 내맘대로 / 밑에 데이터랑 같을 필요 없음 -->
         <tbody id="contacts">
-          <!-- <tr> 태그를 배열 요소 개수만큼 만들어라 / key : 데이터의 식별 번호-->
-          <!-- 반복적인 데이터를 렌더링 -->
-          <!-- 형식(배열 사용시) : <태그명 v-for="변수 in 배열" :key="id값" -->
-          <tr v-for="contact in contacts" :key="contact.no">
-            <td>{{contact.no}}</td>
-            <td>{{contact.name}}</td>
-            <td>{{contact.tel}}</td>
-          </tr>
+          <!-- 여러 요소를 묶어서 반복 렌더링 하기 / <template v-for="..."> -->
+          <template v-for="(contact, index) in contacts" :key="contact.no">
+            <tr>
+              <td>{{index+1}}</td>
+              <td>{{contact.name}}</td>
+              <td>{{contact.tel}}</td>
+            </tr>
+            <tr class="divider" v-if="index%4===3">
+              <td colspan="3"></td>
+            </tr>
+          </template>
         </tbody>
       </table>
     </div>
@@ -51,11 +59,22 @@
       name: 'App',
       data() {
         return {
+          pageno: 1,
+          pageSize: 4,
+          totalcount: 100,
           contacts: [
             { no: 1011, name: 'RM', tel: '010-3333-3333' },
             { no: 1012, name: '정국', tel: '010-3333-3333' },
             { no: 1013, name: '제이홉', tel: '010-3333-3333' },
             { no: 1014, name: '슈가', tel: '010-3333-3333' },
+            { no: 1012, name: '정국', tel: '010-3333-3333' },
+            { no: 1013, name: '제이홉', tel: '010-3333-3333' },
+            { no: 1011, name: 'RM', tel: '010-3333-3333' },
+            { no: 1012, name: '정국', tel: '010-3333-3333' },
+            { no: 1013, name: '제이홉', tel: '010-3333-3333' },
+            { no: 1014, name: '슈가', tel: '010-3333-3333' },
+            { no: 1012, name: '정국', tel: '010-3333-3333' },
+            { no: 1013, name: '제이홉', tel: '010-3333-3333' },
           ],
         };
       },

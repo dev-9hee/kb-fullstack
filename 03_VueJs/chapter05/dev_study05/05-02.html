@@ -1,0 +1,50 @@
+<!-- 이벤트 핸들러 메서드 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      금액 : <input type="text" v-model.number="amount" /><br />
+      <button @click="deposit">입금</button>
+      <button v-on:click="withdraw">인출</button>
+      <br />
+      <h3>계좌잔고 : {{balance}}</h3>
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return {
+          amount: 0,
+          balance: 0,
+        };
+      },
+      methods: {
+        deposit() {
+          let amt = parseInt(this.amount);
+          if (amt <= 0) {
+            alert('0보다 큰 값을 예금하세요.');
+          } else {
+            this.balance += amt; // this => vueApp 객체 / 값이 수정되면 렌더링이 일어남
+          }
+        },
+        withdraw() {
+          let amt = parseInt(this.amount);
+          if (amt <= 0) {
+            alert('0보다 큰 값을 인출하세요.');
+          } else if (amt > this.balance) {
+            alert('잔고보다 많은 금액을 인출할 수 없습니다.');
+          } else {
+            this.balance -= amt;
+          }
+        },
+      },
+    }).mount('#app');
+  </script>
+</html>

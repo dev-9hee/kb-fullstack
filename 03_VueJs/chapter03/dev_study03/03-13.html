@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <select id="regions">
+        <!-- 이 옵션을 비활성화(disabled) 상태로.. / 이 옵션이 기본적으로 선택된 상태임 -->
+        <option disabled="disabled" selected>지역 선택</option>
+        <!-- 형식(객체 사용시) : <태그명 v-for="(val, key) in 객체" :key="key"> -->
+        <!-- 객체는 순서보장 안됨 -->
+        <!-- <option value="A" key="A">Asia</option>와 같음... -->
+        <option v-for="(val, key) in regions" :value="key" :key="key">
+          {{ val }}
+        </option>
+      </select>
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return {
+          regions: {
+            A: 'Asia',
+            B: 'America',
+            C: 'Europe',
+            D: 'Africa',
+            E: 'Oceania',
+          },
+        };
+      },
+    }).mount('#app');
+  </script>
+</html>

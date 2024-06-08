@@ -1,0 +1,33 @@
+<!-- 계산된 속성과의 비교 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      x : <input type="text" v-model.number="x" /><br />
+      y : <input type="text" v-model.number="y" /><br />
+      덧셈 결과 : {{sum}}
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return { x: 0, y: 0 };
+      },
+      // 함수의 실행은 의존하고 있는 속성 또는 DATA가 변경될 때 한 번 호출됨
+      computed: {
+        sum() {
+          const result = Number(this.x) + Number(this.y);
+          if (isNaN(result)) return 0;
+          else return result;
+        },
+      },
+    }).mount('#app');
+  </script>
+</html>

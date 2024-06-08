@@ -1,0 +1,58 @@
+<!-- 이벤트 전파와 버블링 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+      #outer {
+        width: 200px;
+        height: 200px;
+        border: solid 2px black;
+        background-color: aqua;
+        position: absolute;
+        top: 100px;
+        left: 50px;
+        padding: 10px;
+      }
+      #inner {
+        width: 100px;
+        height: 100px;
+        border: solid 2px black;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div id="outer" @click="outerClick">
+        <div id="inner" @click="innerClick"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return {};
+      },
+      methods: {
+        outerClick(e) {
+          console.log('### OUTER CLICK');
+          console.log('Event Phase: ', e.eventPhase); // 현재 이벤트가 어떤 단계에서 처리되고 있는지
+          console.log('Current Target: ', e.currentTarget); // 이벤트 리스너가 현재 실행되고 있는 요소
+          // 이벤트가 버블링이나 캡처링 단계에 있을 때, 이벤트 리스너가 실행되는 요소를 참조
+          console.log('Target: ', e.target); // 이벤트가 실제로 발생한 요소
+        },
+        innerClick(e) {
+          console.log('### INNER CLICK');
+          console.log('Event Phase: ', e.eventPhase);
+          console.log('Current Target: ', e.currentTarget);
+          console.log('Target: ', e.target);
+        },
+      },
+    }).mount('#app');
+  </script>
+</html>

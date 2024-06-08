@@ -1,3 +1,4 @@
+<!-- v-for에서 index 얻기 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,11 +35,10 @@
           </tr>
         </thead>
         <tbody id="contacts">
-          <!-- <tr> 태그를 배열 요소 개수만큼 만들어라 / key : 데이터의 식별 번호-->
-          <!-- 반복적인 데이터를 렌더링 -->
-          <!-- 형식(배열 사용시) : <태그명 v-for="변수 in 배열" :key="id값" -->
-          <tr v-for="contact in contacts" :key="contact.no">
-            <td>{{contact.no}}</td>
+          <!-- 형식(배열 사용시) : <태그명 v-for="(contact, index) in contacts" ...> -->
+          <!-- 만약 객체 사용시 : <태그명 v-for="(val, key, index) in regions" ...> -->
+          <tr v-for="(contact, index) in contacts" :key="contact.no">
+            <td>{{index+1}}</td>
             <td>{{contact.name}}</td>
             <td>{{contact.tel}}</td>
           </tr>

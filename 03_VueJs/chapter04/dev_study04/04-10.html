@@ -1,0 +1,46 @@
+<!-- 생명주기 메서드 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      1보다 큰 수 : <input type="text" v-model.number="num" />
+      <br />
+      1부터 입력한 값까지의 합 : <span>{{sum}}</span><br />
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return {
+          num: 0,
+        };
+      },
+      computed: {
+        sum() {
+          let n = parseInt(this.num);
+          if (Number.isNaN(n)) return 0;
+          return (n * (n + 1)) / 2;
+        },
+      },
+      // 인스턴스 생성이 완료된 후 동기적으로 호출됨 / 모두 완료된 상태
+      created() {
+        console.log('## created');
+      },
+      // mount()에 의해 컴포넌트 인스턴스가 HTML Document의 요소에 마운트된 후에 호출
+      mounted() {
+        console.log('## mounted');
+      },
+      // 데이터의 변경으로 가상 DOM이 다시 렌더링되고 패치된 후에 호출 / 컴포넌트의 DOM이 업데이트된 상태
+      updated() {
+        console.log('## updated');
+      },
+    }).mount('#app');
+  </script>
+</html>

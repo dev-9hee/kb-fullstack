@@ -1,0 +1,28 @@
+<!-- 인라인 이벤트 핸들러 지정 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 단 한 줄의 코드만 실행 => 인라인 이벤트로 처리 => 인라인 코드로 화살표 함수를 등록 -->
+      <input type="text" :value="name" @input="(e)=>this.name=e.target.value" />
+      <br />
+      이름 : <span>{{name}}</span>
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return {
+          name: '',
+        };
+      },
+    }).mount('#app');
+  </script>
+</html>

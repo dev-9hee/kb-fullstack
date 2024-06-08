@@ -20,13 +20,18 @@
           arr: [],
         };
       },
+      // created : 화면과 관련되지 않은 외부 리소스 연결, 이벤트 초기화 등
       created() {
         console.log('######### created');
         const tempArr = [];
         for (let i = 0; i < 10; i++) {
           tempArr.push(parseInt(Math.random() * 10));
         }
+        // ...tempArr => 전개 연산자 : 객체, 배열 내의 값을 분해된 값으로 전달
+        // 배열 내부의 값은 복사, but this.arr과 tempArr은 서로 다른 배열
         this.arr = [...tempArr];
+        console.log(this.arr === tempArr); // 깊은 비교, false
+        console.log(this.arr == tempArr); // 얕은 비교, false
       },
     }).mount('#app');
   </script>
