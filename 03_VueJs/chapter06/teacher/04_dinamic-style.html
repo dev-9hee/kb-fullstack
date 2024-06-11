@@ -22,19 +22,24 @@
     </div>
   </body>
   <script>
+    // Vue.js 앱
     const vueApp = Vue.createApp({
       name: 'App',
       data() {
         return {
+          // isOrange라는 변수를 정의하고 초기값을 false로 설정
           isOrange: false,
         };
       },
       methods: {
+        // 이 메서드는 isOrange 값을 현재 값의 반대로 변경
         toggleStyle() {
           this.isOrange = !this.isOrange; // false면 true로 true면 false로
         },
       },
       computed: {
+        // computed 속성에서 styleObj라는 계산된 속성을 정의
+        // isOrange 값이 true이면 'bgOrange' 클래스를 반환하고, false이면 'bgSkyblue' 클래스를 반환
         styleObj() {
           return this.isOrange ? 'bgOrange' : 'bgSkyblue';
         },

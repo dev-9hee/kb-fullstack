@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoList</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="./todoList.css" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="app" class="container">
+      <div class="card card-body bg-light">
+        <div classe="title">:: Todolist App</div>
+      </div>
+      <div class="card card-default card-borderless">
+        <div class="card-body">
+          <div class="row mb-3">
+            <div class="col">
+              <div class="input-group">
+                <input
+                  id="msg"
+                  type="text"
+                  class="form-control"
+                  name="msg"
+                  placeholder="할일을 여기에 입력!"
+                  v-model.trim="todo"
+                  @keyup.enter="addTodo"
+                />
+                <span class="btn btn-primary input-group-addon" @click="addTodo"
+                  >추가</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <ul class="list-group">
+                <li
+                  v-for="todoitem in todolist"
+                  :key="todoitem.id"
+                  class="list-group-item"
+                  :class="{ 'list-group-item-success': todoitem.completed }"
+                  @click="toggleCompleted(todoitem.id)"
+                >
+                  <span
+                    class="pointer"
+                    :class="{ 'todo-done' : todoitem.completed}"
+                  >
+                    {{ todoitem.todo }} {{ todoitem.completed ? "(완료)" : "" }}
+                  </span>
+                  <span
+                    class="float-end badge bg-secondary pointer"
+                    @click.stop="deleteTodo(todoitem.id)"
+                    >삭제</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let ts = new Date().getTime();
+
+    let vueApp = Vue.createApp({
+      name: 'App',
+      // 데이터 정의
+      data() {
+        return {
+          todo: '', // 텍스브 박스에 사용자가 입력하는 내용을 받기 위한 data
+          todolist: [
+            // 추가한 todo들의 목록, id : todo 한 건의 고유키, todo : todo 내용, completed : 완료 여부..
+            { id: ts, todo: '자전거 타기', completed: false },
+            { id: ts + 1, todo: '딸과 공원 산책', completed: true },
+            { id: ts + 2, todo: '일요일 애견 카페', completed: false },
+            { id: ts + 3, todo: 'Vue 원고 집필', completed: false },
+          ],
+        };
+      },
+      // 메서드 정의
+      methods: {
+        // 텍스트 박스에 할 일(todo)를 입력하고 엔터를 누르거나 추가 버튼을 누른 경우 todolist에 새로운 todo 추가
+        addTodo() {
+          if (this.todo.length >= 2) {
+            this.todolist.push({
+              id: new Date().getTime(),
+              todo: this.todo,
+              completed: false,
+            });
+            this.todo = '';
+          }
+        },
+        // 삭제 버튼을 클릭하면 해당 id의 할 일(todo)를 찾아서 삭제
+        deleteTodo(id) {
+          let index = this.todolist.findIndex((item) => id === item.id);
+          this.todolist.splice(index, 1);
+        },
+        // 할 일(todo) 한 건을 클릭하면 해당 id의 completed 값을 토글
+        toggleCompleted(id) {
+          let index = this.todolist.findIndex((item) => id === item.id);
+          this.todolist[index].completed = !this.todolist[index].completed;
+        },
+      },
+    }).mount('#app');
+  </script>
+</html>

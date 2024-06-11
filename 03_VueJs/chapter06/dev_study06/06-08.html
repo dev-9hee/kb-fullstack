@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+      .btnColor {
+        background-color: aqua;
+        color: black;
+      }
+      .btnAlign {
+        text-align: center;
+        width: 120px;
+      }
+      .btnBorder {
+        border: khaki dashed 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <input type="checkbox" v-model="btnColor" />
+      색상<br />
+      <input type="checkbox" v-model="btnAlign" />
+      정렬, 크기<br />
+      <input type="checkbox" v-model="btnBorder" />
+      테두리<br />
+      <!-- 객체를 직접 :class에 바인딩 / :class에 바인딩할 때 객체를 생성한 것 -->
+      <!-- btnColor == btnColor:btnColor / 이름이 같아서 생략됨-->
+      <!-- btnColor가 true면 btnColor 클래스가 부여되는 것, false면 부여되지 않는 것 -->
+      <button :class="{btnColor, btnAlign, btnBorder}">버튼</button>
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return {
+          btnColor: false,
+          btnAlign: false,
+          btnBorder: false,
+        };
+      },
+    }).mount('#app');
+  </script>
+</html>

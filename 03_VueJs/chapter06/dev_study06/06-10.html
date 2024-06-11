@@ -1,0 +1,75 @@
+<!-- 계산된 속성을 스타일 적용하기  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+      /* 입력 상자의 테두리를 검은색으로 설정 */
+      .score {
+        border: solid 1px black;
+      }
+      /* 배경을 하늘색으로, 글자색을 보라색으로 설정 */
+      .warning {
+        background-color: skyblue;
+        color: purple;
+      }
+      /* 이미지 크기와 위치를 조정 */
+      .warnimage {
+        width: 18px;
+        height: 18px;
+        top: 5px;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Vue 템플릿 -->
+    <div id="app">
+      <div>
+        <p>1부터 100까지만 입력가능합니다.</p>
+        <div>
+          점수 :
+          <!-- v-model.number 디렉티브는 입력된 값을 scorenum 변수에 바인딩하며, 숫자로 자동 변환 -->
+          <!-- :class="info"는 info 속성에 따라 클래스가 적용됩니다. 
+                여기서 info.warning이 true일 경우 .warning 클래스가 적용 -->
+          <!-- v-if="info.warning"은 info.warning이 true일 때만 이미지를 표시 -->
+          <input
+            type="text"
+            class="score"
+            v-model.number="scorenum"
+            :class="info"
+          />
+          <img
+            src="https://contactsvc.bmaster.kro.kr/img/error.png"
+            class="warnimage"
+            v-if="info.warning"
+            title="1부터 100까지만 입력하세요."
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // Vue.js 앱
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return {
+          // scorenum이라는 변수를 정의하고 초기값을 50으로 설정
+          scorenum: 50,
+        };
+      },
+      computed: {
+        // info라는 계산된 속성을 정의
+        info() {
+          // scorenum 값이 1에서 100 사이에 있는지 확인하고, 범위를 벗어나면 warning을 true로 설정
+          // this.scorenum < 1 || this.scorenum > 100 일 때 warning을 true로 설정
+          return { warning: this.scorenum < 1 || this.scorenum > 100 };
+        },
+      },
+    }).mount('#app');
+  </script>
+</html>

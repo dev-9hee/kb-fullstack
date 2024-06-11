@@ -1,0 +1,26 @@
+<!-- 스타일 적용 순서 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 우선순위 3 */
+      .test {
+        background-color: yellow;
+        border: double 4px gray;
+      }
+      /* 우선순위 2 */
+      .over {
+        background-color: aqua;
+        width: 300px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 우선순위 1 -->
+    <div style="background-color: orange" class="test over"></div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 같이 배정하고 싶을 때 배열 사용!! -->
+      <button :style="[myColor, myLayout]">버튼1</button>
+    </div>
+  </body>
+  <script>
+    const vueApp = Vue.createApp({
+      name: 'App',
+      data() {
+        return {
+          myColor: {
+            // 색상
+            backgroundColor: 'purple',
+            color: 'yellow',
+          },
+          myLayout: {
+            // 배치
+            width: '150px',
+            height: '80px',
+            textAlign: 'center',
+          },
+        };
+      },
+    }).mount('#app');
+  </script>
+</html>

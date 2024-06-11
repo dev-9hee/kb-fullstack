@@ -18,9 +18,9 @@
   <body>
     <div id="app">
       <h1 :class="styleObj">배경은 ???</h1>
-      <!-- <label for="checkSt">{{ bc }}</label> -->
-      오렌지색 ?<input type="checkBox" v-model="isOrange" />
-      <!-- <input id="checkSt" type="checkbox" @click="checkStyle" /> -->
+      <label for="checkSt">{{ bc }}</label>
+      <!-- {{ bc }}<input type="checkBox" v-model="isOrange" @click="checkStyle" /> -->
+      <input id="checkSt" type="checkbox" @click="checkStyle" />
       <!-- checkbox 자체 속성이 체크되면 true, 체크 안되면 false -->
     </div>
   </body>
@@ -33,15 +33,15 @@
           bc: '오렌지색 ?',
         };
       },
-      // methods: {
-      //   checkStyle() {
-      //     this.isOrange = !this.isOrange; // false면 true로 true면 false로
-      //   },
-      // },
+      methods: {
+        checkStyle() {
+          this.isOrange = !this.isOrange; // false면 true로 true면 false로
+        },
+      },
       computed: {
         styleObj() {
           return (
-            // this.isOrange ? (this.bc = '하늘색 ?') : (this.bc = '오렌지색 ?'),
+            this.isOrange ? (this.bc = '하늘색 ?') : (this.bc = '오렌지색 ?'),
             this.isOrange ? 'bgOrange' : 'bgSkyblue'
           );
         },
