@@ -8,7 +8,7 @@
         alt="Menu"
         @click="openModal"
       />
-      <div>온가정</div>
+      <div>버디의 가계부</div>
       <img
         class="icon-home"
         src="./icons/home.png"
@@ -16,10 +16,9 @@
         @click="navigateTo('/')"
       />
     </div>
-    <div class="line"></div>
 
     <!-- 모달창에서 페이지 선택 -->
-    <div v-if="showModal" class="modal">
+    <div v-if="showModal" class="modalcontainer">
       <div class="modal-box">
         <img
           class="icon-close"
@@ -31,9 +30,17 @@
           거래 내역
         </button>
         &nbsp;
+        <button class="contentAddBtn" @click="navigateTo('/add')">
+          거래 추가
+        </button>
+        &nbsp;
         <!-- <button @click="navigateTo('/content')">새로운 거래</button> -->
         <button class="summaryBtn" @click="navigateTo('/summary')">
           거래 요약
+        </button>
+        &nbsp;
+        <button class="calendarBtn" @click="navigateTo('/calendar')">
+          캘린더
         </button>
       </div>
     </div>
@@ -44,7 +51,7 @@
 <script setup>
 import { ref } from 'vue';
 import { RouterView, useRouter } from 'vue-router';
-import '@/assets/main.css';
+import '@/asset/main.css';
 
 const showModal = ref(false);
 const router = useRouter();

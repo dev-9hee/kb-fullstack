@@ -1,26 +1,6 @@
 {
   "manageList": [
     {
-      "id": "6f02",
-      "year": 2024,
-      "month": 6,
-      "day": 12,
-      "amount": 1000000,
-      "memo": "돈이다!!!",
-      "category": "용돈",
-      "date": "2024-06-12"
-    },
-    {
-      "id": "e9cb",
-      "year": 2023,
-      "month": 6,
-      "day": 22,
-      "amount": 1000000,
-      "memo": "우왕 신난다",
-      "category": "용돈",
-      "date": "2023-06-22"
-    },
-    {
       "id": "88b7",
       "year": 2024,
       "month": 6,
@@ -31,16 +11,6 @@
       "date": "2024-06-12"
     },
     {
-      "id": "cce2",
-      "year": 2024,
-      "month": 6,
-      "day": 11,
-      "amount": -50000,
-      "memo": "아프지 말아요",
-      "category": "병원비",
-      "date": "2024-06-11"
-    },
-    {
       "id": "7b8b",
       "year": 2024,
       "month": 4,
@@ -49,6 +19,46 @@
       "memo": "좋아요!",
       "category": "용돈",
       "date": "2024-04-23"
+    },
+    {
+      "id": "8e48",
+      "year": 2020,
+      "month": 12,
+      "day": 22,
+      "amount": 55443434,
+      "memo": "ddddd",
+      "category": "용돈",
+      "date": "2020-12-22"
+    },
+    {
+      "id": "b57c",
+      "year": 2018,
+      "month": 12,
+      "day": 12,
+      "amount": 6644554,
+      "memo": "fdfsfsrf",
+      "category": "월급",
+      "date": "2018-12-12"
+    },
+    {
+      "id": "bac0",
+      "year": 2025,
+      "month": 12,
+      "day": 22,
+      "amount": 44444,
+      "memo": "dsdfs",
+      "category": "용돈",
+      "date": "2025-12-22"
+    },
+    {
+      "id": "ed29",
+      "year": 2023,
+      "month": 12,
+      "day": 12,
+      "amount": -3344432,
+      "memo": "dsdsfs",
+      "category": "공과금",
+      "date": "2023-12-12"
     }
   ]
 }

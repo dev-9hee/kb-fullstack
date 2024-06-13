@@ -1,0 +1,48 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* margin-top: 55px; */
+}
+.homeContent {
+  /* 전체적인 여백 설정 */
+  margin: 0;
+}
+.contentItem {
+  margin-bottom: 30px; /* 각 요소의 하단 여백 설정 */
+}
+.redText {
+  color: red;
+  font-weight: bold;
+}
+.greenText {
+  color: #04cd9a;
+  font-weight: bold;
+}
+.amountBoxContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.amountBox {
+  flex-grow: 1;
+  width: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+.amountBox span {
+  margin-left: 5px;
+}
+.icon-plus {
+  width: 30px;
+  height: 35px;
+}
+.icon-minus {
+  width: 30px;
+  height: 35px;
+}

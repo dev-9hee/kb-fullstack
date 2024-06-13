@@ -3,6 +3,8 @@ import Home from '@/views/Home.vue';
 import HistoryPage from '@/views/HistoryPage.vue';
 import AddContent from '@/views/AddContent.vue';
 import SummaryPage from '@/views/SummaryPage.vue';
+import CalenderPage from '@/views/CalenderPage.vue';
+import CategoryModal from '@/views/CategoryModal.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,7 +21,7 @@ const router = createRouter({
     },
 
     {
-      path: '/content',
+      path: '/add',
       name: 'addcontent',
       component: AddContent,
     },
@@ -28,6 +30,16 @@ const router = createRouter({
       path: '/summary',
       name: 'summarypage',
       component: SummaryPage,
+    },
+    {
+      path: '/category',
+      name: 'categoryModal',
+      component: CategoryModal,
+    },
+    {
+      path: '/calendar',
+      name: 'CalenderPage',
+      component: CalenderPage,
     },
   ],
 });

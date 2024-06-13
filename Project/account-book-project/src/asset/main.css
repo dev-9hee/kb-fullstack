@@ -25,12 +25,14 @@ body {
   background: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
+  /* 수정 */
+  padding: 10px 10px;
 }
 /* 위에 공통 상단 바 */
 .top-container {
   width: 320px;
   height: 55px;
-  background: #f8eba0;
+  background: white;
   position: relative;
   align-items: center;
   justify-content: space-between;
@@ -40,17 +42,21 @@ body {
 /* 각 페이지 기본 레이아웃 */
 .subcontainer {
   width: 300px;
-  height: 493px;
+  height: 487px;
+  /* width: 280px;
+  height: 473px; */
   position: absolute;
   z-index: 4;
   margin-left: auto;
   margin-right: auto;
   margin-top: 55px;
   background: white;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+  border-radius: 10px;
+  /* border-radius: 0 0 5px 5px; */
   position: fixed;
   padding: 10px;
+  /* border: 10px solid #ffc002; */
 }
 /* 내역페이지, 요약페이지 선택하는 메뉴 아이콘 */
 .icon-menu {
@@ -61,10 +67,10 @@ body {
   position: absolute;
   cursor: pointer;
 }
-/* 웹 이름 : 온가정 */
+/* 웹 이름 : 버디의 가계부 */
 .top-container > div {
-  left: 139px;
-  top: 17px;
+  left: 110px;
+  top: 13px;
   position: absolute;
   font-weight: 600;
   font-size: 20px;
@@ -81,47 +87,40 @@ body {
   position: absolute;
   cursor: pointer;
 }
-/* 줄 삽입 */
-.line {
-  width: 318px;
-  height: 0px;
-  top: 55px;
-  position: absolute;
-  border: 1px solid #6d6d6d;
-  transform: rotate(-0.18deg);
-  z-index: 6;
-}
 /* 메뉴 모달 */
-.modal {
+.modalcontainer {
   position: relative;
 }
 .modal-box {
   width: 90px;
-  height: 110px;
-  background: #af8f6f;
+  height: 160px;
+  /* height: 110px; */
+  background: #04cd9a;
   z-index: 10;
   left: 13.65px;
   top: 16.23px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(160, 160, 160, 0.8);
   border-radius: 10px;
   position: absolute;
 }
 /* 닫기 아이콘 */
 .icon-close {
-  width: 16.73px;
-  height: 16.73px;
+  width: 10px;
+  height: 10px;
   position: absolute;
-  top: 4px;
-  left: 70px;
+  top: 6px;
+  left: 75px;
   cursor: pointer;
 }
 /* 버튼 모양 */
+/* mergeconflict  ~.calendarBtn 까지*/
 .modal-box > button {
   width: 70px;
   height: 25px;
   padding: 2px;
-  background: #f8eba0;
-  border-radius: 5px;
+  background: white;
+  border-radius: 10px;
   border: 1px solid #6d6d6d;
   cursor: pointer;
 }
@@ -131,9 +130,21 @@ body {
   left: 9px;
   top: 32px;
 }
+/* 거래 추가 번튼 위치 */
+.contentAddBtn {
+  position: absolute;
+  left: 9px;
+  top: 62px;
+}
 /* 요약 내역 버튼 위치 */
 .summaryBtn {
   position: absolute;
   left: 9px;
-  top: 74px;
+  top: 92px;
+}
+/* 캘린더 버튼 위치 */
+.calendarBtn {
+  position: absolute;
+  left: 9px;
+  top: 122px;
 }

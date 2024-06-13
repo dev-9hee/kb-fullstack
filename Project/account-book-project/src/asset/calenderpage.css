@@ -1,0 +1,77 @@
+.calendar-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+.calendar-text2 {
+  align-self: flex-start;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.calendar-text2 .income {
+  color: green;
+}
+.calendar-text2 .expense {
+  color: red;
+}
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 380px;
+}
+
+.calendar-box {
+  width: 280px;
+  height: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  /* 고정된 크기로 설정 */
+  grid-template-rows: repeat(6, 1fr); /* 6주를 고정으로 설정 */
+}
+
+.day,
+.date {
+  padding: 5px 0;
+  text-align: center;
+  height: 30px;
+}
+
+.today {
+  background-color: #f0f0f0;
+}
+
+.money-amount {
+  font-size: 8px;
+}
+
+.previous-month,
+.next-month {
+  color: #ccc;
+}
+
+.empty-cell {
+  background-color: transparent;
+}
+.removeBtn {
+  border: none;
+}

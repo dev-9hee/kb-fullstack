@@ -1,30 +1,48 @@
+.filter-container {
+  position: relative;
+  width: 300px;
+  top: 5px;
+  background-color: white;
+  z-index: 1;
+}
 /* 필터 3개 레이아웃 */
 .filter-container > select {
   position: absolute;
-  width: 93px;
+  width: 65px;
+  /* width: 80px; */
   height: 25px;
   padding: 0 4.5747280120849 61px;
-  background: #af8f6f;
+  background: #04cd9a;
   border-radius: 5px;
   border: 1px solid #ccc;
   color: white;
+  top: 0;
+  z-index: 1;
 }
 select > option {
   color: white;
 }
+/* 년도 선택 필터 */
+.yearselect {
+  left: 18px;
+  top: 9px;
+}
 /* 월 선택 필터 */
 .monthselect {
-  left: 7px;
+  left: 84.5px;
+  /* left: 28px; */
+  /* top: 9px; */
   top: 9px;
 }
 /* 수입/지출 선택 필터 */
 .contentselect {
-  left: 113px;
+  left: 151px;
+  /* left: 122px; */
   top: 9px;
 }
 /* 카테고리 선택 필터 */
 .categoryselect {
-  left: 219px;
+  left: 217px;
   top: 9px;
 }
 /* 리스트 레이아웃 */
@@ -34,20 +52,22 @@ select > option {
   padding: 5px;
   list-style: none;
   position: relative;
-  top: 38px;
+  top: 28px;
   left: 13px;
   overflow-y: auto;
   border-radius: 5px;
+
+  margin-top: 1rem;
 }
 .listitem {
   height: 40px;
   /* padding: 5px; */
-  background-color: #f8eba0;
+  background-color: #fff4d2;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 2px solid #6d6d6d;
+  border: 2px solid #ccc;
   border-radius: 7px;
   padding: 10px;
   margin-bottom: 10px;
@@ -66,13 +86,14 @@ select > option {
   width: 40px;
   height: 60px;
   border-radius: 5px;
-  background-color: #af8f6f;
+  background-color: rgba(160, 160, 160, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s ease;
+  cursor: pointer;
 }
 .listitem:hover .delete-button {
   opacity: 1;
@@ -87,25 +108,25 @@ select > option {
   overflow: hidden;
 }
 .left {
-  width: 170px;
+  width: 160px;
   float: left;
 }
-.date {
+.historydate {
   color: #828282;
   margin-bottom: 10px;
   font-size: 10px;
 }
-.category {
-  margin-bottom: 5px;
+.historycategory {
   font-size: 13.7px;
 }
 .amount-right {
-  width: 70px;
+  width: 80px;
   height: 40px;
   line-height: 40px;
   margin: auto 0;
   float: left;
   font-size: 15px;
+  text-align: right;
 }
 /* 금액 색상 */
 .amount-right.income {
@@ -122,25 +143,29 @@ select > option {
   background-color: #f1f1f1; /* 스크롤바 트랙 색상 */
 }
 .list::-webkit-scrollbar-thumb {
-  background-color: #af8f6f; /* 스크롤바 thumb 색상 */
+  background-color: #04cd9a; /* 스크롤바 thumb 색상 */
   border-radius: 6px; /* 스크롤바 thumb 모서리 둥글기 */
 }
 .list::-webkit-scrollbar-thumb:hover {
-  background-color: pink; /* 스크롤바 thumb hover 색상 */
+  background-color: #727271; /* 스크롤바 thumb hover 색상 */
 }
 /* 거래 내역 추가 버튼 */
 .add-button {
   position: absolute;
   top: 390px;
   left: 23px;
-  height: 116px;
+  height: 105px;
   width: 273px;
-  background-color: #af8f6f;
+  background-color: #04cd9a;
+  border: 1.090000033378601px solid #f0faee;
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 /* 추가 아이콘 크기 */
 .icon-add {
   width: 49px;
-  height: 45.33px;
+  height: 45px;
 }
 /* 거래 내역 추가  */
 .add-text {

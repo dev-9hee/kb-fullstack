@@ -1,8 +1,14 @@
-<!-- 거래 내역 페이지 -->
 <template>
   <div class="subcontainer">
-    <!-- 필터 입력 필드 -->
     <div class="filter-container">
+      <select class="yearselect" v-model="filterYear">
+        <option value="" disabled>년도 선택</option>
+        <option value="">전체</option>
+        <option v-for="year in 4" :key="year" :value="2020 + year">
+          {{ 2020 + year }}년
+        </option>
+      </select>
+
       <select class="monthselect" v-model="filterDate">
         <option value="" disabled>월 선택</option>
         <option value="">전체</option>
@@ -42,8 +48,8 @@
       <li class="listitem" v-for="item in filteredManageList" :key="item.id">
         <div class="content">
           <div class="left">
-            <div class="date">{{ item.date }}</div>
-            <div class="category">
+            <div class="historydate">{{ item.date }}</div>
+            <div class="historycategory">
               [ {{ item.category }} ] : {{ item.memo }}
             </div>
           </div>
@@ -72,12 +78,12 @@
 import { useMoneyManageStore } from '@/stores/counter';
 import { ref, onMounted, computed } from 'vue';
 import { useRouter } from 'vue-router';
-import '@/assets/historypage.css';
+import '@/asset/historypage.css';
 
 const router = useRouter();
 
 function navigateToContent() {
-  router.push('/content');
+  router.push('/add');
 }
 
 const filterList = useMoneyManageStore();
@@ -113,35 +119,24 @@ const { states, fetchMoneyManageList } = filterList;
 
 const filterCategory = ref('');
 const filterDate = ref('');
+const filterYear = ref('');
 const filterAmountType = ref('all');
 
-function filterManageList(
-  manageList,
-  filterCategory,
-  filterDate,
-  filterAmountType
-) {
-  return manageList.filter((item) => {
-    // 카테고리 필터 적용
-    const matchesCategory =
-      filterCategory === '' || item.category === filterCategory;
-    // 날짜 필터 적용
-    const matchesDate = filterDate === '' || item.month === filterDate;
-    // 수입/지출 필터 적용
-    const matchesAmountType =
-      filterAmountType === 'all' ||
-      (filterAmountType === 'income' && item.amount > 0) ||
-      (filterAmountType === 'expense' && item.amount < 0);
-    return matchesCategory && matchesDate && matchesAmountType;
-  });
-}
-// filteredManageList computed 속성에서 필터링 로직을 호출하도록 업데이트
+// 필터 매서드 ??
 const filteredManageList = computed(() => {
-  return filterManageList(
-    filterList.states.manageList,
-    filterCategory.value,
-    filterDate.value,
-    filterAmountType.value
-  );
+  return filterList.states.manageList.filter((item) => {
+    const matchesYear =
+      filterYear.value === '' || item.year === parseInt(filterYear.value);
+    const matchesCategory =
+      filterCategory.value === '' || item.category === filterCategory.value;
+    const matchesMonth =
+      filterDate.value === '' || item.month === parseInt(filterDate.value);
+    const matchesAmountType =
+      filterAmountType.value === 'all' ||
+      (filterAmountType.value === 'income' && item.amount >= 0) ||
+      (filterAmountType.value === 'expense' && item.amount < 0);
+
+    return matchesYear && matchesCategory && matchesMonth && matchesAmountType;
+  });
 });
 </script>
