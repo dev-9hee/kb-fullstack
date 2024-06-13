@@ -1,5 +1,6 @@
+<!-- home - 첫 화면 -->
 <template>
-  <div>
+  <div class="subcontainer">
     <h1>총 금액 출력</h1>
     <div>
       <img

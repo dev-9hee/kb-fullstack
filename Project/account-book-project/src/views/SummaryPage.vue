@@ -1,5 +1,6 @@
+<!-- 요약 페이지 -->
 <template>
-  <div>
+  <div class="subcontainer">
     <select v-model="filterDate">
       <option value="" disabled>월 선택</option>
       <option v-for="m in 12" :key="m" :value="m">{{ m }}월</option>

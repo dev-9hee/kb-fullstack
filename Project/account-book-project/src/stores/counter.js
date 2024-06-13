@@ -7,6 +7,7 @@ const BASE_URL = 'http://localhost:3000/manageList';
 export const useMoneyManageStore = defineStore('moneyManageStore', () => {
   const states = reactive({
     manageList: [],
+    isMenuOpen: false,
   });
 
   async function fetchMoneyManageList() {
@@ -26,6 +27,16 @@ export const useMoneyManageStore = defineStore('moneyManageStore', () => {
       fetchMoneyManageList();
     } catch (e) {
       alert('추가 작업 중 오류 발생');
+      console.log(e);
+    }
+  }
+
+  async function deleteMoneyManageItem(id) {
+    try {
+      await axios.delete(`${BASE_URL}/${id}`);
+      await fetchMoneyManageList();
+    } catch (e) {
+      alert('삭제 작업 중 오류 발생');
       console.log(e);
     }
   }
@@ -53,10 +64,15 @@ export const useMoneyManageStore = defineStore('moneyManageStore', () => {
     };
     await addMoneyEntry(newEntry);
   }
+  function toggleMenu() {
+    states.isMenuOpen = !states.isMenuOpen;
+  }
 
   return {
     states,
     fetchMoneyManageList,
     saveMoney,
+    deleteMoneyManageItem,
+    toggleMenu,
   };
 });

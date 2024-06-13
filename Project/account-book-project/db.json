@@ -1,52 +1,54 @@
 {
   "manageList": [
     {
-      "id": "1cdc",
-      "year": 2022,
-      "month": 12,
+      "id": "6f02",
+      "year": 2024,
+      "month": 6,
       "day": 12,
-      "amount": 200,
-      "memo": "오예",
-      "date": "2022-12-12"
+      "amount": 1000000,
+      "memo": "돈이다!!!",
+      "category": "용돈",
+      "date": "2024-06-12"
     },
     {
-      "id": "24a5",
+      "id": "e9cb",
       "year": 2023,
-      "month": 2,
-      "day": 13,
-      "amount": 300,
-      "memo": "굿",
-      "date": "2023-02-13"
-    },
-    {
-      "id": "0204",
-      "year": 1111,
-      "month": 11,
-      "day": 11,
-      "amount": 123,
-      "memo": "메모메모",
-      "category": "월급",
-      "date": "1111-11-11"
-    },
-    {
-      "id": "5259",
-      "year": 2023,
-      "month": 12,
-      "day": 10,
-      "amount": -500,
-      "memo": "종이에 베임",
-      "category": "병원비",
-      "date": "2023-12-10"
-    },
-    {
-      "id": "655a",
-      "year": 1234,
-      "month": 12,
+      "month": 6,
       "day": 22,
-      "amount": 20000000,
-      "memo": "dhdhdhhdhd",
-      "category": "월급",
-      "date": "1234-12-22"
+      "amount": 1000000,
+      "memo": "우왕 신난다",
+      "category": "용돈",
+      "date": "2023-06-22"
+    },
+    {
+      "id": "88b7",
+      "year": 2024,
+      "month": 6,
+      "day": 12,
+      "amount": 50000,
+      "memo": "돈이다!!",
+      "category": "용돈",
+      "date": "2024-06-12"
+    },
+    {
+      "id": "cce2",
+      "year": 2024,
+      "month": 6,
+      "day": 11,
+      "amount": -50000,
+      "memo": "아프지 말아요",
+      "category": "병원비",
+      "date": "2024-06-11"
+    },
+    {
+      "id": "7b8b",
+      "year": 2024,
+      "month": 4,
+      "day": 23,
+      "amount": 800000,
+      "memo": "좋아요!",
+      "category": "용돈",
+      "date": "2024-04-23"
     }
   ]
 }
