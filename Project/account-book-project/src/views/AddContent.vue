@@ -162,15 +162,16 @@ const closeModal = () => {
   isModalOpen.value = false;
 };
 
-EventBus.on('tagSelected', ({ tagImg, tagName, isIncome: income }) => {
+EventBus.on('tagSelected', ({ tagImg, tagName, isIncome }) => {
+  console.log('tagSelected 이벤트 수신:', { tagImg, tagName, isIncome });
   selectedImg.value = tagImg;
   selectedCategory.value = tagName;
-  isDeposit.value = income; // 수입인지 지출인지 설정
+  isDeposit.value = isIncome; // 수입인지 지출인지 설정
   category.value = tagName; // 선택한 카테고리를 설정
   router.push('/add');
 });
 
-const { states, fetchMoneyManageList, saveMoney } = moneyManageStore;
+// const { states, fetchMoneyManageList, saveMoney } = moneyManageStore;
 
 const handleSubmit = () => {
   const yearValue = parseInt(year.value, 10);
@@ -231,9 +232,9 @@ const resetForm = () => {
   category.value = '';
   isDeposit.value = true; // 기본값으로 되돌림
   selectedCategory.value = '카테고리 설정';
-  selectedImg.value = '';
+  selectedImg.value = 'src/icons/add-button.png';
   alertMessage.value = '';
 
-  router.push('history');
+  router.push('/history');
 };
 </script>

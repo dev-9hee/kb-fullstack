@@ -11,46 +11,6 @@
       "date": "2024-06-12"
     },
     {
-      "id": "7b8b",
-      "year": 2024,
-      "month": 4,
-      "day": 23,
-      "amount": 800000,
-      "memo": "좋아요!",
-      "category": "용돈",
-      "date": "2024-04-23"
-    },
-    {
-      "id": "8e48",
-      "year": 2020,
-      "month": 12,
-      "day": 22,
-      "amount": 55443434,
-      "memo": "ddddd",
-      "category": "용돈",
-      "date": "2020-12-22"
-    },
-    {
-      "id": "b57c",
-      "year": 2018,
-      "month": 12,
-      "day": 12,
-      "amount": 6644554,
-      "memo": "fdfsfsrf",
-      "category": "월급",
-      "date": "2018-12-12"
-    },
-    {
-      "id": "bac0",
-      "year": 2025,
-      "month": 12,
-      "day": 22,
-      "amount": 44444,
-      "memo": "dsdfs",
-      "category": "용돈",
-      "date": "2025-12-22"
-    },
-    {
       "id": "ed29",
       "year": 2023,
       "month": 12,
@@ -59,6 +19,116 @@
       "memo": "dsdsfs",
       "category": "공과금",
       "date": "2023-12-12"
+    },
+    {
+      "id": "6a8d",
+      "year": 2024,
+      "month": 6,
+      "day": 11,
+      "amount": 500000,
+      "memo": "일일알바",
+      "category": "알바비",
+      "date": "2024-06-11"
+    },
+    {
+      "id": "331b",
+      "year": 2024,
+      "month": 6,
+      "day": 11,
+      "amount": 50000,
+      "memo": "로또 3등 당첨",
+      "category": "당첨금",
+      "date": "2024-06-11"
+    },
+    {
+      "id": "d8fb",
+      "year": 2024,
+      "month": 6,
+      "day": 12,
+      "amount": 30000,
+      "memo": "돈 들어와따!!",
+      "category": "월급",
+      "date": "2024-06-12"
+    },
+    {
+      "id": "1c5f",
+      "year": 2024,
+      "month": 6,
+      "day": 13,
+      "amount": 100000,
+      "memo": "꽁돈",
+      "category": "잡소득",
+      "date": "2024-06-13"
+    },
+    {
+      "id": "c522",
+      "year": 2024,
+      "month": 6,
+      "day": 13,
+      "amount": 200000,
+      "memo": "우왕",
+      "category": "퇴직금",
+      "date": "2024-06-13"
+    },
+    {
+      "id": "dce0",
+      "year": 2024,
+      "month": 6,
+      "day": 11,
+      "amount": 50000,
+      "memo": "친구 생일선물",
+      "category": "선물",
+      "date": "2024-06-11"
+    },
+    {
+      "id": "bc71",
+      "year": 2024,
+      "month": 6,
+      "day": 11,
+      "amount": 333333,
+      "memo": "eeeeee",
+      "category": "카페",
+      "date": "2024-06-11"
+    },
+    {
+      "id": "579c",
+      "year": 2024,
+      "month": 6,
+      "day": 11,
+      "amount": 50000,
+      "memo": "점심",
+      "category": "데이트",
+      "date": "2024-06-11"
+    },
+    {
+      "id": "5c82",
+      "year": 2024,
+      "month": 6,
+      "day": 12,
+      "amount": 500000,
+      "memo": "그만..",
+      "category": "공과금",
+      "date": "2024-06-12"
+    },
+    {
+      "id": "3e12",
+      "year": 2024,
+      "month": 12,
+      "day": 12,
+      "amount": -50000,
+      "memo": "여행가고프",
+      "category": "여행",
+      "date": "2024-12-12"
+    },
+    {
+      "id": "1234",
+      "year": 2024,
+      "month": 6,
+      "day": 12,
+      "amount": 30000,
+      "memo": "수도세",
+      "category": "공과금",
+      "date": "2024-06-12"
     }
   ]
 }

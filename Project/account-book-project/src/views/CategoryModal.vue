@@ -89,8 +89,8 @@ const selectExpense = () => {
   isIncome.value = false;
 };
 
-const selectTag = (tagName, tagImg, isIncome) => {
-  EventBus.emit('tagSelected', { tagName, isIncome, tagImg });
+const selectTag = (tagName, tagImg) => {
+  EventBus.emit('tagSelected', { tagName, isIncome: isIncome.value, tagImg });
   emit('close');
 };
 
