@@ -16,3 +16,7 @@ function addContact3(name, phone, email = '이메일없음', age = 0) {
   console.log(name, phone, email, age);
 }
 addContact3('이몽룡', '010-3434-8989');
+
+// 이몽룡 010-3434-8989 이메일없음 0
+// 이몽룡 010-3434-8989 이메일없음 0
+// 이몽룡 010-3434-8989 이메일없음 0

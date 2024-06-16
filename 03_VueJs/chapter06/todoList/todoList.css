@@ -1,8 +1,15 @@
 body {
+  /* 기본 레이아웃 초기화 */
   margin: 0;
   padding: 0;
+  /* 글씨체 설정 */
   font-family: sans-serif;
 }
+/* 전체적인 뷰 크기 설정 */
+.container {
+  padding: 10px 10px 10px 10px;
+}
+/* Todolist App 텍스트 위치, 굵기, 크기 */
 .title {
   text-align: center;
   font-weight: bold;
@@ -10,9 +17,6 @@ body {
 }
 .todo-done {
   text-decoration: line-through;
-}
-.container {
-  padding: 10px 10px 10px 10px;
 }
 .panel-borderless {
   border: 0;

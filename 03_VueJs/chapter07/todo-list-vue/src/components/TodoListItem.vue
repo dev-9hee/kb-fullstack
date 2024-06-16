@@ -20,5 +20,3 @@ export default {
   props: ['todoItem'],
 };
 </script>
-
-<style lang="scss" scoped></style>

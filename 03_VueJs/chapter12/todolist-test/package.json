@@ -1,16 +1,18 @@
 {
-  "name": "test-vue-app",
+  "name": "todolist-test",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "mitt": "^3.0.1",
-    "vue": "^3.4.21"
+    "axios": "^1.7.2",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",

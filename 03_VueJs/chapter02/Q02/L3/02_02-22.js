@@ -17,3 +17,7 @@ promise
   .catch((error) => {
     console.log('오류 발생 ==>  ' + error);
   });
+
+// first!
+// second
+// third

@@ -1,3 +1,4 @@
+<!-- 데이터 변경 버튼을 클릭하면 changeData() 호출되어 데이터 속성읙 값이 바뀜 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,21 +8,28 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
+    <!-- Vue.js 애플리케이션의 마운트 지점, 이 div 안에 Vue 앱의 내용이 렌더링 -->
     <div id="app">
+      <!-- Vue.js의 데이터 바인딩 문법, 데이터 속성 message의 값을 화면에 출력 -->
       <h1>{{ message }}</h1>
+      <!-- 버튼 클릭 이벤트를 처리하는 Vue.js의 이벤트 바인딩 문법 -->
       <button @click="changeData">데이터 변경</button>
     </div>
   </body>
   <script>
+    // Vue.js 애플리케이션을 생성하고 '#app' 요소에 마운트하는 코드
     let vue = Vue.createApp({
       name: 'APP',
+      // Vue.js 컴포넌트의 데이터 속성을 정의하는 함수, 여기서는 message라는 데이터 속성을 정의
       data() {
         return {
           message: 'Hello, Vue World!',
         };
       },
+      // Vue.js 컴포넌트의 메서드를 정의하는 객체, 여기서는 changeData 메서드를 정의
       methods: {
         changeData() {
+          // 메서드 내에서 message 데이터 속성의 값을 변경하는 코드
           this.message = 'data를 바꿔 버렸단 말씀!';
         },
       },

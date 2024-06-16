@@ -5,4 +5,4 @@ let email = 'gdhong@test.com';
 //let obj = { name: name, age: age, email: email };
 
 let obj = { name, age, email };
-console.log(obj);
+console.log(obj); // { name: '홍길동', age: 20, email: 'gdhong@test.com' }
