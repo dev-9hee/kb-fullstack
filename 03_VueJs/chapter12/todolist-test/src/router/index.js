@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/pages/Home.vue';
 import Login from '@/pages/Login.vue';
 import Todo from '@/pages/Todo.vue';
+import TodoMain from '@/pages/TodoMain.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,6 +23,11 @@ const router = createRouter({
       component: Todo,
       // 인가받은 사용자만 true
       meta: { requiresAuth: true },
+    },
+    {
+      path: '/todomain',
+      name: 'todomain',
+      component: TodoMain,
     },
   ],
 });

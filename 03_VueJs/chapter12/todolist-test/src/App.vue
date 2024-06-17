@@ -6,6 +6,8 @@
       <router-link to="/login">로그인</router-link>
       &nbsp;
       <router-link to="/todo">Todolist</router-link>
+      <!-- &nbsp;
+      <router-link to="/todomain">TodoMain</router-link> -->
     </nav>
     <router-view />
   </div>

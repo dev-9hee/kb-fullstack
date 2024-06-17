@@ -1,12 +1,6 @@
 {
   "todos": [
     {
-      "id": "1",
-      "todo": "뉴진스 보기",
-      "done": false,
-      "editing": false
-    },
-    {
       "id": "2",
       "todo": "페이커 숭배하기",
       "done": false,
@@ -19,10 +13,14 @@
       "editing": false
     },
     {
-      "id": "4",
-      "todo": "모듈 평가 준비",
-      "done": false,
-      "editing": false
+      "id": "58b8",
+      "todo": "그래",
+      "done": false
+    },
+    {
+      "id": "e963",
+      "todo": "안녕",
+      "done": false
     }
   ],
   "users": [
