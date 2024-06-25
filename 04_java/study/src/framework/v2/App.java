@@ -45,7 +45,8 @@ public class App {
         run = false;
     }
 
-    public void executeCommand(int selectNo) {
+    public void executeCommand(int selectNo) { // OCP 위배, 안 좋은 코드!!
+        // 연속된 숫자 => 배열의 인덱스로 매핑 가능
         if(selectNo == 1) {
             getStudentNum();
         } else if(selectNo == 2) {

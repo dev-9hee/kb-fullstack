@@ -1,5 +1,6 @@
 package ch05.sec07;
 
+// 값 목록으로 다차원 배열 생성
 public class MultidimensionalArrayByValueListEx {
     public static void main(String[] args) {
         // 2차원 배열 생성

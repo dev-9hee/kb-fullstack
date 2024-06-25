@@ -1,6 +1,7 @@
 package ch05.sec06;
 
 public class ArrayCreateByValueListExample2 {
+
     // printItem() 메소드 선언
     public static void printItem(int[] scores) {
         // 매개변수가 참조하는 배열의 항목을 출력
@@ -8,6 +9,7 @@ public class ArrayCreateByValueListExample2 {
             System.out.println("score[" + i + "] = " + scores[i]);
         }
     }
+
     public static void main(String[] args) {
        // 배열 변수 선언
         int[] scores;

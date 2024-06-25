@@ -1,5 +1,6 @@
 package ch05.sec06;
 
+// new 연산자로 배열 생성
 public class ArrayCreateByNewExample {
     public static void main(String[] args) {
         // 배열 변수 선언과 배열 생성

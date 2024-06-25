@@ -1,5 +1,6 @@
 package ch05.sec07;
 
+// new 연산자로 다차원 배열 생성
 public class MultidimensionalArrayByNewEx {
     public static void main(String[] args) {
         // 각 반의 학생 수가 3명으로 동일할 경우 점수 저장을 위한 2차원 배열 생성

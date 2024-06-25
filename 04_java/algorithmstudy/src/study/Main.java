@@ -1,6 +1,5 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+package study;
+
 import java.util.Scanner;
 
 public class Main {
