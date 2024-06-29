@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ScoulaLib.iml" filepath="$PROJECT_DIR$/ScoulaLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scoulacli.iml" filepath="$PROJECT_DIR$/scoulacli.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scoulacli.main.iml" filepath="$PROJECT_DIR$/.idea/modules/scoulacli.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scoulacli.test.iml" filepath="$PROJECT_DIR$/.idea/modules/scoulacli.test.iml" />
+    </modules>
+  </component>
+</project>
