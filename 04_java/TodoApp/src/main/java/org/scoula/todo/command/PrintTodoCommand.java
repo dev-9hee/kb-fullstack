@@ -9,5 +9,11 @@ public class PrintTodoCommand implements Command {
 
     @Override
     public void execute() {
+        for(Todo todo : dao.getList()) {
+            // 문자열 자체를 포맷팅
+            String line = "%2d] %s".formatted(todo.getId(), todo.getTitle());
+            System.out.println(line);
+        }
+        System.out.println();
     }
 }

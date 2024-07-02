@@ -34,7 +34,7 @@ public class TodoDao {
     }
 
     public Todo getTodo(int id) {
-        for(Todo todo : list) {
+        for(Todo todo : list) { // 코드 중복
             if(todo.getId() == id) {
                 return todo;
             }
@@ -47,7 +47,7 @@ public class TodoDao {
     }
 
     public void update(Todo todo) {
-        for(int i = 0; i < list.size(); i++) {
+        for(int i = 0; i < list.size(); i++) { // 코드 중복
             if(todo.getId() == list.get(i).getId()) {
                 list.set(i, todo);
             }
@@ -55,7 +55,7 @@ public class TodoDao {
     }
 
     public void delete(int id) {
-        for(int i = 0; i < list.size(); i++) {
+        for(int i = 0; i < list.size(); i++) { // 코드 중복
             if(list.get(i).getId() == id) {
                 list.remove(i);
                 return;
