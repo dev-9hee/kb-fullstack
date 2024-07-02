@@ -11,6 +11,14 @@ public class ForEx2 {
             System.out.println(num);
         }
 
+        /* 이게 더 나은 코드
+        int num = 2;
+        for (int count = 1; count <= 10; count++) {
+            System.out.println(num);
+            num +=2;
+        }
+        */
+
 //        for (int num=1; num<=20; num++) {
 //            if (num%2==0) {
 //                System.out.println(num);
