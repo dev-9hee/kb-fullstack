@@ -1,7 +1,5 @@
 package pattern.builder;
 
-import ch07.sec06.package1.B;
-
 import java.util.Date;
 
 public class Memo {

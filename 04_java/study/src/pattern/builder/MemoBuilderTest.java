@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class MemoBuilderTest {
     public static void main(String[] args) {
-        Memo memo = new Memo.Builder()
+        pattern.builder.Memo memo = new pattern.builder.Memo.Builder()
                 .id(10L)
                 .title("제목")
                 .content("메모 내용")
