@@ -11,16 +11,6 @@
       "date": "2024-06-12"
     },
     {
-      "id": "ed29",
-      "year": 2023,
-      "month": 12,
-      "day": 12,
-      "amount": -3344432,
-      "memo": "dsdsfs",
-      "category": "공과금",
-      "date": "2023-12-12"
-    },
-    {
       "id": "6a8d",
       "year": 2024,
       "month": 6,
@@ -71,46 +61,6 @@
       "date": "2024-06-13"
     },
     {
-      "id": "dce0",
-      "year": 2024,
-      "month": 6,
-      "day": 11,
-      "amount": 50000,
-      "memo": "친구 생일선물",
-      "category": "선물",
-      "date": "2024-06-11"
-    },
-    {
-      "id": "bc71",
-      "year": 2024,
-      "month": 6,
-      "day": 11,
-      "amount": 333333,
-      "memo": "eeeeee",
-      "category": "카페",
-      "date": "2024-06-11"
-    },
-    {
-      "id": "579c",
-      "year": 2024,
-      "month": 6,
-      "day": 11,
-      "amount": 50000,
-      "memo": "점심",
-      "category": "데이트",
-      "date": "2024-06-11"
-    },
-    {
-      "id": "5c82",
-      "year": 2024,
-      "month": 6,
-      "day": 12,
-      "amount": 500000,
-      "memo": "그만..",
-      "category": "공과금",
-      "date": "2024-06-12"
-    },
-    {
       "id": "3e12",
       "year": 2024,
       "month": 12,
@@ -121,14 +71,14 @@
       "date": "2024-12-12"
     },
     {
-      "id": "1234",
+      "id": "c42f",
       "year": 2024,
-      "month": 6,
-      "day": 12,
-      "amount": 30000,
-      "memo": "수도세",
-      "category": "공과금",
-      "date": "2024-06-12"
+      "month": 7,
+      "day": 13,
+      "amount": -50000,
+      "memo": "카페 투어",
+      "category": "카페",
+      "date": "2024-07-13"
     }
   ]
 }

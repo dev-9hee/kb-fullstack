@@ -54,7 +54,8 @@ export const useMoneyManageStore = defineStore('moneyManageStore', () => {
       year,
       month,
       day,
-      amount: isDeposit ? amount : -amount, // 양수 또는 음수로 저장
+      amount,
+      // : isDeposit ? amount : -amount,
       memo,
       category,
       date: `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(

@@ -96,7 +96,7 @@
 <script setup>
 import { useMoneyManageStore } from '@/stores/counter';
 import { ref, onMounted, watch } from 'vue';
-import CategoryModal from '@/views/CategoryModal.vue';
+import CategoryModal from './CategoryModal.vue';
 import EventBus from '../eventBus';
 import { useRouter } from 'vue-router';
 import '@/asset/addcontent.css';
@@ -162,16 +162,15 @@ const closeModal = () => {
   isModalOpen.value = false;
 };
 
-EventBus.on('tagSelected', ({ tagImg, tagName, isIncome }) => {
-  console.log('tagSelected 이벤트 수신:', { tagImg, tagName, isIncome });
+EventBus.on('tagSelected', ({ tagImg, tagName, isIncome: income }) => {
   selectedImg.value = tagImg;
   selectedCategory.value = tagName;
-  isDeposit.value = isIncome; // 수입인지 지출인지 설정
+  isDeposit.value = income; // 수입인지 지출인지 설정
   category.value = tagName; // 선택한 카테고리를 설정
   router.push('/add');
 });
 
-// const { states, fetchMoneyManageList, saveMoney } = moneyManageStore;
+const { states, fetchMoneyManageList, saveMoney } = moneyManageStore;
 
 const handleSubmit = () => {
   const yearValue = parseInt(year.value, 10);
@@ -194,10 +193,6 @@ const handleSubmit = () => {
     alertMessage.value = '금액을 입력해주세요';
   } else {
     alertMessage.value = '';
-  }
-
-  if (!alertMessage.value) {
-    // alert(alertMessage);
 
     const finalAmount = isDeposit.value ? amountValue : -amountValue;
     moneyManageStore.saveMoney(
@@ -232,9 +227,9 @@ const resetForm = () => {
   category.value = '';
   isDeposit.value = true; // 기본값으로 되돌림
   selectedCategory.value = '카테고리 설정';
-  selectedImg.value = 'src/icons/add-button.png';
+  selectedImg.value = '';
   alertMessage.value = '';
 
-  router.push('/history');
+  router.push('history');
 };
 </script>
