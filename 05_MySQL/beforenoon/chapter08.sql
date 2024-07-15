@@ -63,3 +63,17 @@ INSERT INTO usertbl(userID, name) VALUES ('KAY', '김아영');
 INSERT INTO usertbl VALUES ('WB', '원빈', 1982, '대전', '019', '9876543', 176, '2020.5.5');
 SELECT * FROM usertbl;
 */
+-- 열의 추가
+ALTER TABLE usertbl
+ADD homepage VARCHAR(30) -- 열추가
+DEFAULT 'http://www.hanbit.co.kr' -- 디폴트 값 
+NULL; -- NULL 허용함
+-- 열의 삭제
+ALTER TABLE usertbl
+DROP COLUMN mobile1;
+SELECT * FROM usertbl;
+-- 열의 이름 및 데이터 형식 변경
+ALTER TABLE usertbl 
+CHANGE COLUMN name uName VARCHAR(20) NULL;
+-- 열의 제약 조건 추가 및 삭제
+ALTER TABLE usertbl DROP PRIMARY KEY; -- 오류 발생
