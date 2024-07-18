@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.scoula'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':ScoulaCli')
+
+    implementation 'com.opencsv:opencsv:5.5'
+    implementation 'org.springframework:spring-context:5.3.37' // 스프링 추가
+    testImplementation "org.springframework:spring-test:5.3.37"
+
+    implementation 'com.mysql:mysql-connector-j:8.3.0'
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    testCompileOnly 'org.projectlombok:lombok:1.18.30'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
