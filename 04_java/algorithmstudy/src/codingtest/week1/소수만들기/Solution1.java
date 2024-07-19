@@ -1,4 +1,4 @@
-package week1.소수만들기;
+package codingtest.week1.소수만들기;
 
 import java.util.*; // 임포트하고 시작
 

@@ -1,4 +1,4 @@
-package week1.twosum;
+package codingtest.week1.twosum;
 
 import java.util.*; // 임포트하고 시작하기
 
