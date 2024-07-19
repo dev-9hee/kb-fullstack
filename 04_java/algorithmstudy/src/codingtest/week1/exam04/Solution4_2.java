@@ -1,12 +1,11 @@
-package codingtest.week1.exam04;
+package week1.exam04;
 
 // 문제4) Lv.2 - 연속된 부분 수열의 합
 // 강사님 풀이
 public class Solution4_2 {
     public int[] solution(int[] sequence, int k) {
-        // 부분수열의 합은 k, 합이 k인 부분수열이 여러개인 경우 길이가 짧은 수열을 찾음
         // ✅ 정답 범위의 초기값을 (0, 1,000,000)으로 설정한다.
-        int[] answer = {0, 1_000_000}; // 배열의 초기값설정
+        int[] answer = {0, 1_000_000};
 
         int total = 0;
         int start = 0;
@@ -22,7 +21,7 @@ public class Solution4_2 {
                 start++;
             }
 
-            // ✅ 합계가 k와 같고, 현재 윈도우가 우선순위가 더 높다면 정답을 현재 범위로 바꾼다. - 갱신
+            // ✅ 합계가 k와 같고, 현재 윈도우가 우선순위가 더 높다면 정답을 현재 범위로 바꾼다.
             if (total == k) {
                 if ((end - start) < (answer[1] - answer[0])) {
                     answer[0] = start;

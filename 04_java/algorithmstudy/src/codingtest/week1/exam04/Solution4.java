@@ -1,4 +1,4 @@
-package codingtest.week1.exam04;
+package week1.exam04;
 
 // 문제4) Lv.2 - 연속된 부분 수열의 합
 // 내 풀이, 시간 초과

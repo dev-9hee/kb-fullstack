@@ -1,4 +1,4 @@
-package codingtest.week1.exam03;
+package week1.exam03;
 
 import java.util.*;
 
