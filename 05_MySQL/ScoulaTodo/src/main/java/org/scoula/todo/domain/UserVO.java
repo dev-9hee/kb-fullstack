@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data // Lombok 이 자동으로 getter, setter, toString, equals, hashCode 메서드를 생성
 @NoArgsConstructor // Lombok 애노테이션으로, 매개변수가 없는 기본 생성자를 생성
 @AllArgsConstructor // Lombok 애노테이션으로, 모든 필드를 매개변수로 가지는 생성자를 생성
-@Builder
+@Builder // 객체를 생성할 수 있도록 함
 public class UserVO {
     private String id;
     private String password;

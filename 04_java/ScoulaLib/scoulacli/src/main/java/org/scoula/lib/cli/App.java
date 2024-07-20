@@ -2,7 +2,6 @@ package org.scoula.lib.cli;
 
 import org.scoula.lib.cli.command.Command;
 import org.scoula.lib.cli.command.ExitCommand;
-import org.scoula.lib.cli.exception.BadMenuException;
 import org.scoula.lib.cli.ui.Menu;
 import org.scoula.lib.cli.ui.MenuItem;
 
@@ -38,5 +37,4 @@ public abstract class App {
             }
         }
     }
-
 }
