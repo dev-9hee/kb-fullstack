@@ -5,6 +5,7 @@ import lombok.Data;
 
 import java.sql.Timestamp;
 
+// TodoList 데이터를 표현하기 위한 Vo 객체
 @Data
 @AllArgsConstructor
 public class TodoVo { // TodoList 정보를 관리
