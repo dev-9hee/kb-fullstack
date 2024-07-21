@@ -1,4 +1,4 @@
-package week2.study;
+package codingtest.week2.study;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

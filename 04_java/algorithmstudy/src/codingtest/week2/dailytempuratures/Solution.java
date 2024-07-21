@@ -1,9 +1,9 @@
-package week2.study;
+package codingtest.week2.dailytempuratures;
 
 import java.util.*;
 
 // 일일 기온 문제
-public class Study3 {
+public class Solution {
     public int[] dailyTemperatures(int[] temperatures) {
         int[] result = new int[temperatures.length];
         Deque<Integer> stack = new ArrayDeque<>();
@@ -19,7 +19,7 @@ public class Study3 {
     }
 
     public static void main(String[] args) {
-        Study3 study3 = new Study3();
+        Solution study3 = new Solution();
         int[] ans = study3.dailyTemperatures(new int[]{73,74,75,71,69,72,76,73});
         System.out.print("[");
         for (int i = 0; i < ans.length; i++) {
