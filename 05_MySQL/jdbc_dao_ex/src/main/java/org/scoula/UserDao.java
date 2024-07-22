@@ -30,13 +30,33 @@ public class UserDao {
         }
     }
 
-    // 회원 추가
+    // 다른 클래스에서 DB에 접속한 내용을 바탕으로 쿼리를 실행해야 함
+    // 접속에 성공한 정보를 담은 conn 을 리턴
+    public static Connection getConnection() {
+        return conn;
+    }
+
+    // conn 의 접속 정보를 빈 값으로 바꿔서 DB 서버와의 접속을 종료
+    public static void close() {
+        try {
+            if (conn != null) {
+                conn.close();
+                conn = null;
+            }
+        }  catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // 회원 추가, 사용자 정보를 데이터베이스에 삽입하는 메서드
     public void create(String email, String password) {
         String sql = "INSERT INTO users (email, password) VALUES (?, ?)";
 
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setString(1, email);
             ps.setString(2, password);
+            // 완성된 PreparedStatement 를 DB 에 보내는 executeUpdate 를 실행
+            // executeUpdate 는 자신이 수행한 쿼리로 인해서 몇 줄의 변화가 생겼는지 리턴
             int count = ps.executeUpdate();
             if (count > 0) {
                 System.out.println("회원 추가 성공!!!!");
@@ -108,7 +128,7 @@ public class UserDao {
     public void getAllUsersWithName() {
         String sql = "SELECT u.id, u.email, u.password, ui.name " +
                 "FROM users u " +
-                "INNER JOIN user_info ui ON u.id = ui.id";
+                "INNER JOIN user_info ui ON u.id = ui.id ORDER BY u.id ASC";
 
         try (Statement st = conn.createStatement();
              ResultSet rs = st.executeQuery(sql)) {
