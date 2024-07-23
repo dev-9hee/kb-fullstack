@@ -22,6 +22,8 @@ public class Context {
 
     private Context() {
         map = new HashMap<>();
+        // NullPointException 에러 해결 => static 으로 감싸서 밖으로 빼기
+        // 등록 순서도 중요!!
         map.put(UserDao.class, new UserDaoImpl());
         map.put(TodoDao.class, new TodoDaoImpl());
         map.put(AccountService.class, new AccountService());
