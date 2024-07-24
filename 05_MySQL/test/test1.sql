@@ -162,12 +162,12 @@ WHERE population > ANY (SELECT population FROM city WHERE countrycode = 'KOR');
 SELECT name 도시명, population 인구수, district 지역
 FROM city
 WHERE population = ANY (SELECT population FROM city WHERE countrycode = 'nld' OR district = 'noord-holland');
-SELECT population FROM city WHERE countrycode = 'nld' OR district = 'noord-holland';
 
 ##### GROUP BY, HAVING ##### ~별 : 그룹핑 하라
 # HAVING 은 그룹에 대한 조건
 -- city 테이블에서 countrycode 가 kor, nld 인 국가별 최대 인구수를 출력
 -- countrycode랑 최대 인구수 출력, countrycode는 별칭 사용해서 국가로 출력
+-- SELECT countrycode AS 국가, ROUND(AVG(population)) AS '평균 인구 수'
 SELECT countrycode AS 국가, MAX(population) AS '최대 인구 수'
 FROM city
 WHERE countrycode IN ('KOR', 'NLD')

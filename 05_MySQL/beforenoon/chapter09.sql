@@ -46,10 +46,10 @@ CREATE TABLE tbl5 (
 SHOW INDEX FROM tbl5;
 
 -- 문제6
-CREATE DATABASE IF NOT EXISTS testdb;
+CREATE DATABASE IF NOT EXISTS testdb; -- 데이터베이스가 이미 존재하지 않을 때만 새 데이터베이스를 생성
 USE testdb;
 -- 테이블 생성
-DROP TABLE IF EXISTS usertbl;
+DROP TABLE IF EXISTS usertbl; -- 테이블이 존재할 때만 삭제 작업을 수행
 CREATE TABLE usertbl (
 	userID		CHAR(8) NOT NULL PRIMARY KEY,
     name		VARCHAR(10) NOT NULL,
