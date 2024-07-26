@@ -107,7 +107,7 @@ public class UserDao {
         }
     }
 
-    // 회원 삭제
+    // 회원삭제
     public void deleteUser(int id) {
         String sql = "DELETE FROM users WHERE id = ?";
 
