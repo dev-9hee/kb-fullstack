@@ -4,7 +4,7 @@ import java.util.*; // 임포트하고 시작
 
 // Lv.1 : 완전탐색, 수학
 // 문제2) 소수 만들기
-// 완전탬색 - 강사님 슈도코드 참고
+// 완전탐색 - 강사님 슈도코드 참고 / 시간 복잡도 : n^3
 public class Solution1 {
     public int solution(int[] nums) {
         int counter = 0; // 경우의 수 카운트

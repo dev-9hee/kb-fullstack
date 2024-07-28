@@ -1,4 +1,4 @@
-package week1.완주하지못한선수;
+package codingtest.week1.완주하지못한선수;
 
 import java.util.Arrays;
 

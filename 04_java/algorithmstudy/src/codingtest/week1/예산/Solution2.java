@@ -1,12 +1,12 @@
-package week1.exam03;
+package codingtest.week1.예산;
 
-import java.util.Arrays;
+import java.util.*;
 
 // Lv.1 : 그리디, 정렬
 // 문제3) 예산
 // 강사님 풀이, 심화
 // 일반적으로 메소드의 파라미터를 직접 변화시키는 것은 좋지 않다. 따라서 아래와 같이 개선할 수 있다!!
-public class Solution3_3 {
+public class Solution2 {
     public int solution(int[] d, int budget) {
         int budgetCopy = budget;
         // ... budget 대신 budgetCopy 사용..!
@@ -28,7 +28,7 @@ public class Solution3_3 {
 
     public static void main(String[] args) {
         int[] d = {1,3,2,5,4};
-        Solution3 sol = new Solution3();
+        Solution2 sol = new Solution2();
         int result = sol.solution(d, 9);
         System.out.println(result);
     }

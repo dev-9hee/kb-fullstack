@@ -1,4 +1,4 @@
-package codingtest.week1.exam02;
+package codingtest.week1.소수만들기;
 
 import java.util.Arrays;
 
