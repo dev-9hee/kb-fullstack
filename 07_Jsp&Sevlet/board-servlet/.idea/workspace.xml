@@ -5,39 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd834aaa-cec5-4aee-83a8-b0246e3bc73c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/boardservlet/CookieServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/boardservlet/CountFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/boardservlet/EncodingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/boardservlet/LoginFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/auth.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex03/src/main/java/org/scoula/ex03/SportsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex03/src/main/java/org/scoula/ex03/filter/BoardServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex03/src/main/java/org/scoula/ex03/filter/CharacterEncodeFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex03/src/main/webapp/board_form.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex03/src/main/webapp/sports.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex04/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex04/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex04/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex04/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex04/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex04/.idea/template-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex04/src/main/java/org/scoula/ex04/RequestServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex04/src/main/java/org/scoula/ex04/cookie/CartDeleteCookieServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex04/src/main/java/org/scoula/ex04/cookie/CartSaveCookieServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex04/src/main/java/org/scoula/ex04/cookie/CartViewCookieServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex04/src/main/java/org/scoula/ex04/session/CartDeleteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex04/src/main/java/org/scoula/ex04/session/CartSaveServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex04/src/main/java/org/scoula/ex04/session/CartViewServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex04/src/main/webapp/cookie_product.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex04/src/main/webapp/response.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex04/src/main/webapp/session_product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/scoula/boardservlet/BoardServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/scoula/boardservlet/BoardServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/scoula/boardservlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/scoula/boardservlet/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/boardservlet/Ex1Servlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/boardservlet/Ex2Servlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/boardservlet/JstlServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/boardservlet/ScopeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/ex1.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/ex2.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jstl.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/scope.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/scopeCheck.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/scriptlet.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/welcome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +31,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Servelt" />
         <option value="Class" />
         <option value="Jsp File" />
+        <option value="Servelt" />
       </list>
     </option>
   </component>
@@ -100,6 +79,7 @@
     "Tomcat Server.Tomcat 9.0.91.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/KB_Fullstack/07_Jsp&Sevlet/board-servlet/src/main/webapp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -112,6 +92,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\KB_Fullstack\07_Jsp&amp;Sevlet\board-servlet\src\main\webapp" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.91" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.91" ALTERNATIVE_JRE_ENABLED="false">
       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
@@ -223,6 +208,7 @@
       <workItem from="1722235703976" duration="1153000" />
       <workItem from="1722236869303" duration="4359000" />
       <workItem from="1722316526697" duration="8760000" />
+      <workItem from="1722402675726" duration="7183000" />
     </task>
     <servers />
   </component>
