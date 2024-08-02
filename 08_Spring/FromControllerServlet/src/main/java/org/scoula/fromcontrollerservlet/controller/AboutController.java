@@ -3,6 +3,7 @@ package org.scoula.fromcontrollerservlet.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+// 컨트롤러
 public class AboutController implements Controller {
     @Override
     public String getView(HttpServletRequest request, HttpServletResponse response) {
