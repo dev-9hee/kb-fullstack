@@ -13,8 +13,7 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
-// 모든 주소 값이 해당 서블릿을 지나가야 하므로
-// 기본 주소 '/' 매핑
+// 모든 주소 값이 해당 서블릿을 지나가야 하므로 기본 주소 '/' 매핑
 @WebServlet(name = "FrontControllerServlet", value = "/")
 public class FrontControllerServlet extends HttpServlet {
     private Map<String, Controller> controllers = new HashMap<>();
