@@ -1,7 +1,7 @@
-package org.example.controller;
+package org.example.controller.member;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.dto.MemberDtoListV1;
+import org.example.dto.member.MemberDtoListV1;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 

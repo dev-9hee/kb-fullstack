@@ -1,4 +1,4 @@
-package org.example.dto;
+package org.example.dto.member;
 
 // 회원 관리를 위한 DTO 클래스, 데이터 표현
 public class MemberDto {

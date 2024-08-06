@@ -1,4 +1,4 @@
-package org.example.dto;
+package org.example.dto.member;
 
 import java.util.ArrayList;
 import java.util.List;
