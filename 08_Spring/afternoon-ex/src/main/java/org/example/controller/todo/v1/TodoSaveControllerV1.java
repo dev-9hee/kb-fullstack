@@ -1,4 +1,4 @@
-package org.example.controller.todo;
+package org.example.controller.todo.v1;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.dto.todo.TodoDtoListV1;
