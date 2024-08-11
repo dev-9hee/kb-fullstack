@@ -2,6 +2,7 @@ package codingtest.week7.보물지도;
 
 import java.util.*;
 
+// 보물지도
 public class Solution {
     public int solution(int n, int m, int[][] hole) {
         //✅ 함정 위치를 표시한다.
