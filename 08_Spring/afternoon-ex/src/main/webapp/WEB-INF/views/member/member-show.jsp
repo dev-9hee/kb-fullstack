@@ -5,8 +5,8 @@
     <title>회원 목록</title>
 </head>
 <body>
-<%@ include file="header.jsp"%>
-    <h1>회원 목록 V2</h1>
+<%@ include file="../header.jsp"%>
+    <h1>회원 목록</h1>
     <ul>
         <li><b>ID - NAME</b></li>
         <c:forEach var="member" items="${memberList}">

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mapper.PostMapper">
+    <select id="findAll" resultType="PostDto">
+        select id, title, content
+        from posts;
+    </select>
+
+    <select id="findByCondition" resultType="PostDto">
+        select id, title, content
+        from posts
+        <where>
+            <if test="title != null and title != ''">
+                AND title LIKE CONCAT('%', #{title}, '%')
+            </if>
+            <if test="content != null and content != ''">
+                AND content LIKE CONCAT('%', #{content}, '%');
+            </if>
+        </where>
+    </select>
+
+    <delete id="postDelete">
+        delete from posts
+        where id=#{id};
+    </delete>
+
+    <insert id="postSave">
+        insert into posts (title, content)
+        values (#{title}, #{content});
+    </insert>
+</mapper>
