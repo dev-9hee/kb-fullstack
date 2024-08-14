@@ -3,8 +3,12 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true" />
+    </settings>
     <typeAliases>
         <typeAlias alias="MemberDto" type="org.example.dto.member.MemberDto" />
         <typeAlias alias="PostDto" type="org.example.dto.post.PostDto" />
+        <typeAlias alias="BoardDto" type="org.example.dto.board.BoardDto" />
     </typeAliases>
 </configuration>

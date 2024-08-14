@@ -91,4 +91,12 @@ public class PostController {
 
         return "redirect:/post/v1/show";
     }
+
+    // 에러 강제 발생
+    @GetMapping("/error")
+    public String error(HttpServletRequest request) {
+        log.info("================> 강제 에러 발생, " + request.getRequestURI());
+
+        throw new RuntimeException("의도적으로 발생시킨 예외");
+    }
 }
