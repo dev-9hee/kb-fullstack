@@ -9,8 +9,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 @Controller
@@ -117,5 +119,19 @@ public class SampleController {
         header.add("Content-Type", "application/json;charset=UTF-8");
 
         return new ResponseEntity<>(msg, header, HttpStatus.OK);
+    }
+
+    @GetMapping("/exUpload")
+    public void exUpload() {
+        log.info("/exUpload..........");
+    }
+
+    @PostMapping("/exUploadPost")
+    public void exUploadPost(ArrayList<MultipartFile> files) {
+        for(MultipartFile file : files) {
+            log.info("-------------------------------");
+            log.info("name: " + file.getOriginalFilename());
+            log.info("size: " + file.getSize());
+        }
     }
 }
