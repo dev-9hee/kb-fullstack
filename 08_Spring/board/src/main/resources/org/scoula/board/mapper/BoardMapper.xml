@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.scoula.board.mapper.BoardMapper">
+
+    <select id="getList" resultType="BoardVO">
+        <![CDATA[
+            select * from tbl_board
+        ]]>
+    </select>
+
+    <select id="get" resultType="BoardVO">
+        select * from tbl_board where no = #{no}
+    </select>
+
+    <insert id="create">
+        insert into tbl_board (title, content, writer)
+        values (#{title}, #{content}, #{writer})
+
+        <selectKey resultType="Long" keyProperty="no" keyColumn="no" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+    </insert>
+
+    <update id="update">
+        update tbl_board
+        set title       = #{title},
+            content     = #{content},
+            writer      = #{writer},
+            update_date = now()
+        where no = #{no}
+    </update>
+
+    <delete id="delete">
+        delete from tbl_board where no = #{no}
+    </delete>
+
+</mapper>
