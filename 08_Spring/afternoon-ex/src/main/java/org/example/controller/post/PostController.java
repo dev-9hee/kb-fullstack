@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Param;
 import org.example.dto.post.PostDto;
 import org.example.dto.post.PostRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,11 +18,17 @@ import java.util.List;
 
 @Controller
 @Slf4j
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 @RequestMapping("/post/v1")
 public class PostController {
+
     private final PostRepository postRepository;
     private String context = "/post";
+
+    @Autowired
+    public PostController(PostRepository postRepository) {
+        this.postRepository = postRepository;
+    }
 
     // 게시글 목록
     @GetMapping("/show")

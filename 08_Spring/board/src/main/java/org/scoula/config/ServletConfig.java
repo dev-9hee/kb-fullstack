@@ -9,7 +9,11 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
-@ComponentScan(basePackages = {"org.scoula.controller"}) // Spring MVC 용 컴포넌트 등록을 위한 스캔 페이지
+@ComponentScan(basePackages = {
+        "org.scoula.controller",
+        "org.scoula.exception",
+        "org.scoula.board.controller"
+}) // Spring MVC 용 컴포넌트 등록을 위한 스캔 페이지
 public class ServletConfig implements WebMvcConfigurer {
 
     @Override

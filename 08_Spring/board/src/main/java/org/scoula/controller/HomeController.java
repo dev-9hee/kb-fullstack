@@ -10,7 +10,10 @@ public class HomeController {
 
     @GetMapping("/")
     public String home() {
-        log.info("=================> HomeController /");
-        return "index"; // View 의 이름
+//        log.info("=================> HomeController /");
+//        return "index"; // View 의 이름
+
+        // 개발 편의를 위해 홈페이지를 임시로 게시판 목록 페이지로 리다이렉트
+        return "redirect:/board/list";
     }
 }
