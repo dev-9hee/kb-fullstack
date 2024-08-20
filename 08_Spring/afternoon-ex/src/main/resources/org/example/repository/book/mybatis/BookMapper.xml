@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.repository.book.mybatis.BookMapper">
+    <select id="findAll" resultType="BookMybatis">
+        SELECT * FROM books;
+    </select>
+
+    <select id="findById" resultType="BookMybatis">
+        SELECT * FROM books WHERE id = #{id};
+    </select>
+
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO books (title, author)
+        VALUES (#{title}, #{author});
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM books WHERE id = #{id};
+    </delete>
+</mapper>
