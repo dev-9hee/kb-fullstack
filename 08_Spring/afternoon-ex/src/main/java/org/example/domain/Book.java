@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Table(name = "books")
 public class Book {
     @Id // PK 라는걸 알려줌
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(name = "title") // 명시적으로 선언
     private String title;
