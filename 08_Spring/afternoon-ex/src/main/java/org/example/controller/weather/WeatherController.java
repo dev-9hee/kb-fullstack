@@ -28,6 +28,7 @@ public class WeatherController {
     @Value("${weather.api.key}")
     private String API_KEY;
 
+    // 도시 날씨 받아오기
     @GetMapping("/{cityname}")
     public ResponseEntity<WeatherDto> getWeather(@PathVariable("cityname") String cityName) {
         log.info("도시 날씨 받아오기");
@@ -46,6 +47,7 @@ public class WeatherController {
         return ResponseEntity.ok(weather); // 클라이언트에게 JSON 형태로 반환
     }
 
+    // 도시 예보 받아오기
     @GetMapping("/forecast/{cityname}")
     public ResponseEntity<ForecastDto> getForecast(@PathVariable("cityname") String cityName) {
         log.info("도시 예보 받아오기");
