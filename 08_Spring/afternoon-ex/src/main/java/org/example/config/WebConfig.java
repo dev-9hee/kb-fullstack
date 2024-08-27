@@ -1,6 +1,7 @@
 package org.example.config;
 
 import org.example.security.UserConfig;
+import org.example.security.config.SecurityConfig;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.web.context.WebApplicationContext;
@@ -12,7 +13,8 @@ import javax.servlet.Filter;
 import javax.servlet.ServletRegistration;
 
 @Configuration
-@Import(UserConfig.class) // class 전체 정보 임포트
+//@Import(UserConfig.class) // class 전체 정보 임포트
+@Import(SecurityConfig.class)
 public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     @Override
