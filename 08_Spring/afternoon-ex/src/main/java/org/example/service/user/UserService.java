@@ -31,7 +31,7 @@ public class UserService {
         // 전달 받은 비밀번호를 암호화 도구를 사용하여 암호화 한 뒤, 저장하는 형태로 변경
         String encodedPassword = passwordEncoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
-        user.setRoles("ROLE_MEMBER");
+        user.setRoles("ROLE_MEMBER"); // 카카오로 뜨려면 코드 변경 필요!
         return userRepository.save(user);
     }
 }
