@@ -1,4 +1,3 @@
-// login, logout, join 라우팅
 export default [
   {
     path: '/auth/login',
@@ -21,5 +20,3 @@ export default [
     component: () => import('../pages/auth/ChangePasswordPage.vue'),
   },
 ];
-
-// 자동 줄 맞춤 : shift + alt + f

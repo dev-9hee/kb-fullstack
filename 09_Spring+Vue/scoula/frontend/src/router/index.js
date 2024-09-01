@@ -1,4 +1,3 @@
-// 기능별로 라우팅 설정을 모듈화 - 기본 라우팅
 import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '../pages/HomePage.vue';
 import authRotes from './auth';

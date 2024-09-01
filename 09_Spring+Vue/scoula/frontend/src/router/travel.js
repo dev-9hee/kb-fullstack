@@ -1,4 +1,3 @@
-// 추천 여행지 관련 라우팅
 export default [
   {
     path: '/travel/list',
