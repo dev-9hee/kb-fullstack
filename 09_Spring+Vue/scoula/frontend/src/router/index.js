@@ -1,5 +1,10 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+// 기능별로 라우팅 설정을 모듈화 - 기본 라우팅
+import { createRouter, createWebHistory } from 'vue-router';
+import HomePage from '../pages/HomePage.vue';
+import authRotes from './auth';
+import boardRotes from './board';
+import travelRoutes from './travel';
+import galleryRoutes from './gallery';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,17 +12,13 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomePage,
     },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
-    }
-  ]
-})
+    ...authRotes,
+    ...boardRotes,
+    ...travelRoutes,
+    ...galleryRoutes,
+  ],
+});
 
-export default router
+export default router;

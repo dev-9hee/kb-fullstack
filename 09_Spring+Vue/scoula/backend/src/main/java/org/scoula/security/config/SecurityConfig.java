@@ -98,23 +98,23 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter { // 웹 애플
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        // 한글 인코딩 필터 설정, 인증 에러 필터, Jwt 인증 필터, 로그인 인증 필터 설정
-        http.addFilterBefore(encodingFilter(), CsrfFilter.class) // 문자 인코딩 필터를 CsrfFilter 보다 앞에 등록 필요
-                .addFilterBefore(authenticationFilter, UsernamePasswordAuthenticationFilter.class) // 인증 에러 필터
-                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class) // Jwt 인증 필터
-                .addFilterBefore(jwtUsernamePasswordAuthenticationFilter, UsernamePasswordAuthenticationFilter.class); // 로그인 인증 필터 설정
+        http
+                .authorizeRequests() // 경로별 접근 권한 설정
+                .antMatchers(HttpMethod.OPTIONS).permitAll()
+                // 일단 모든 접근 허용
+                .anyRequest().permitAll();
+
+//        // 한글 인코딩 필터 설정, 인증 에러 필터, Jwt 인증 필터, 로그인 인증 필터 설정
+//        http.addFilterBefore(encodingFilter(), CsrfFilter.class) // 문자 인코딩 필터를 CsrfFilter 보다 앞에 등록 필요
+//                .addFilterBefore(authenticationFilter, UsernamePasswordAuthenticationFilter.class) // 인증 에러 필터
+//                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class) // Jwt 인증 필터
+//                .addFilterBefore(jwtUsernamePasswordAuthenticationFilter, UsernamePasswordAuthenticationFilter.class); // 로그인 인증 필터 설정
 
         // 예외 처리 설정
         http
                 .exceptionHandling()
                 .authenticationEntryPoint(authenticationEntryPoint)
                 .accessDeniedHandler(accessDeniedHandler);
-
-        http
-                .authorizeRequests() // 경로별 접근 권한 설정
-                .antMatchers(HttpMethod.OPTIONS).permitAll()
-                // 일단 모든 접근 허용
-                .anyRequest().permitAll();
 
         http.httpBasic().disable() // 기본 HTTP 인증 비활성화
                 .csrf().disable() // CSRF 비활성화
