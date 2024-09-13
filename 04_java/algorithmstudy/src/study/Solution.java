@@ -71,7 +71,7 @@ class Solution {
             }
         }
 
-        // 목표 알고력과 코딩력에 도달하기 위한 최소 시간을 반환...
+        // 목표 알고력과 코딩력에 도달하기 위한 최소 시간을 반환!
         answer = dp[alp_target][cop_target];
         return answer;
     }
