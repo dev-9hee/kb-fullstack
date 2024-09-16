@@ -27,7 +27,7 @@ class RootConfigTest {
 
     @Test
     @DisplayName("DataSource 연결이 된다.")
-    void dataSource() throws SQLException {
+    void dataSource() throws SQLException { // DB 연결 테스트
         try (Connection con = dataSource.getConnection()) {
             log.info("DataSource 준비 완료");
             log.info(con);
