@@ -2,6 +2,7 @@ package codingtest.week9.석유;
 
 import java.util.*;
 
+// 챌린지 문제
 public class Solution {
     private boolean[][] visited;
     private int[] dr = {1, 0, -1, 0};
