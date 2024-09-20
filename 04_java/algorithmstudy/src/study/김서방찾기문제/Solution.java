@@ -1,5 +1,6 @@
 package study.김서방찾기문제;
 
+// 김서방찾기문제
 public class Solution {
     public String solution(String[] seoul) {
         String answer = "";
