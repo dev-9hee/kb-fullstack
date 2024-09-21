@@ -1,6 +1,8 @@
 package study.리스트자르기;
 
 import java.util.ArrayList;
+
+// 리스트 자르기 문제
 class Solution {
     public int[] solution(int n, int[] slicer, int[] num_list) {
         int[] answer = null;
