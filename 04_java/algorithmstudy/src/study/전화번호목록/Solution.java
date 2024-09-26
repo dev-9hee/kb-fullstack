@@ -3,6 +3,7 @@ package study.전화번호목록;
 import java.util.HashSet;
 import java.util.Set;
 
+// 전화번호목록
 public class Solution {
     public boolean solution(String[] phone_book) {
         Set<String> set = new HashSet<>();
