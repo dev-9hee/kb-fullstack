@@ -46,7 +46,7 @@ public class Solution2 {
                 index1++;
             }
         }
-        // 한쪽 그룹이 모두 선택된 후 남아있는 값 정리하기
+        // 한쪽 그룹이 모두 선택된 후 남아있는 값 정리
         while (index1 <= m) {
             A[k] = tmp[index1];
             k++;
